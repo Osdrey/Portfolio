@@ -46,4 +46,10 @@
     body.light-mode .theme-toggle .toggle-thumb {
         background-color: #fff;
     }
+
+/* Language selector */
+body.light-mode #language-selector {
+    background-color: #eee;
+    color: #111;
+}
   
