@@ -2,28 +2,48 @@
     background-color: #f5f5f5;
     color: #111;
 }
-
+  
+/* Sidebar */
+    body.light-mode .sidebar {
+        background-color: #ddd;
+        color: #111;
+    }
+    
+    body.light-mode .sidebar a {
+        color: #111;
+    }
+    
+    body.light-mode .sidebar a:hover {
+        background-color: #ccc;
+    }
+  
 /* Header */
-body.light-mode .main-header {
-    background-color: #fff;
-    color: #111;
-}
-
+    body.light-mode .main-header {
+        background-color: #fff;
+        color: #111;
+    }
+  
 /* Logo */
-body.light-mode .logo {
-    color: #111;
-}
-
+    body.light-mode .logo {
+        color: #111;
+    }
+    
 /* Toggle */
-body.light-mode #toggle-theme i {
-color: #111;
-}
-
+    body.light-mode #toggle-theme i {
+        color: #111;
+    }
+    
+    body.light-mode #language-selector {
+        background-color: #eee;
+        color: #111;
+    }
+  
 /* Toggle slider */
-body.light-mode .theme-toggle {
-background-color: #ccc;
-}
-
-body.light-mode .theme-toggle .toggle-thumb {
-background-color: #fff;
-}
+    body.light-mode .theme-toggle {
+        background-color: #ccc;
+    }
+    
+    body.light-mode .theme-toggle .toggle-thumb {
+        background-color: #fff;
+    }
+  
