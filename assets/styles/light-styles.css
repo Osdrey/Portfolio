@@ -1,0 +1,29 @@
+﻿body.light-mode {
+    background-color: #f5f5f5;
+    color: #111;
+}
+
+/* Header */
+body.light-mode .main-header {
+    background-color: #fff;
+    color: #111;
+}
+
+/* Logo */
+body.light-mode .logo {
+    color: #111;
+}
+
+/* Toggle */
+body.light-mode #toggle-theme i {
+color: #111;
+}
+
+/* Toggle slider */
+body.light-mode .theme-toggle {
+background-color: #ccc;
+}
+
+body.light-mode .theme-toggle .toggle-thumb {
+background-color: #fff;
+}

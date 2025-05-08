@@ -1,0 +1,30 @@
+﻿body.dark-mode {
+    background-color: #121212;
+    color: #f5f5f5;
+}
+
+/* Header */
+body.dark-mode .main-header {
+    background-color: #1a1a1a;
+    color: #f5f5f5;
+}
+
+/* Logo */
+body.dark-mode .logo {
+    color: #f5f5f5;
+}
+
+ /* Toggle */
+ body.dark-mode #toggle-theme i {
+    color: #f5f5f5;
+  }
+
+  /* Toggle slider */
+  body.dark-mode .theme-toggle {
+    background-color: #2e2e2e;
+  }
+  
+  body.dark-mode .theme-toggle .toggle-thumb {
+    background-color: #f5f5f5;
+  }
+  
