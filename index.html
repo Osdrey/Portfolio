@@ -17,6 +17,10 @@
                     <div class="toggle-thumb"></div>
                     <i class="fas fa-sun"></i>
                 </div>
+                <select id="language-selector" title="Seleccionar idioma">
+                    <option value="es">Español</option>
+                    <option value="en">English</option>
+                </select>
             </div>
         </header>
 
@@ -26,31 +30,31 @@
                 <li>
                 <a href="#home">
                     <i class="fas fa-home"></i>
-                    <span>Inicio</span>
+                    <span id="homeLabel"></span>
                 </a>
+                </li>
+                <li>
+                    <a href="#aboutMe">
+                        <i class="fas fa-user"></i>
+                        <span id="aboutMeLabel"></span>
+                    </a>
                 </li>
                 <li>
                 <a href="#projects">
                     <i class="fas fa-laptop-code"></i>
-                    <span>Proyectos</span>
-                </a>
-                </li>
-                <li>
-                <a href="#aboutMe">
-                    <i class="fas fa-user"></i>
-                    <span>Sobre mí</span>
+                    <span id="projectsLabel"></span>
                 </a>
                 </li>
                 <li>
                 <a href="#skills">
                     <i class="fas fa-cogs"></i>
-                    <span>Habilidades</span>
+                    <span id="skillsLabel"></span>
                 </a>
                 </li>
                 <li>
                 <a href="#contact">
                     <i class="fas fa-envelope"></i>
-                    <span>Contacto</span>
+                    <span id="contactLabel"></span>
                 </a>
                 </li>
             </ul>
@@ -66,5 +70,6 @@
 
         <!-- Scripts -->
         <script src="assets/scripts/theme-toggle.js"></script>
+        <script src="assets/scripts/language-selector.js"></script>
     </body>
 </html>
