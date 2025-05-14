@@ -1,7 +1,7 @@
 // Script principal
-import { themeLoader, partialsLoader, handleRouteChange } from 'assets/scripts/loaders.js';
-import { loadTheme, toggleTheme } from 'assets/scripts/theme-toggle.js';
-import { setupLanguageSelector } from 'assets/scripts/language-selector.js';
+import { themeLoader, partialsLoader, handleRouteChange } from './loaders.js';
+import { loadTheme, toggleTheme } from './theme-toggle.js';
+import { setupLanguageSelector } from './language-selector.js';
 
 const init = async () => {
   // Carga de estilos
