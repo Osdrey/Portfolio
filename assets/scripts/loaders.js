@@ -1,4 +1,4 @@
-import { routes } from './routes.js';
+import { routes } from 'assets/scripts/routes.js';
 
 // Carga dinámica de hojas de estilo
 const loadStylesheet = (href, isPageStyle = false) => {
