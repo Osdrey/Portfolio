@@ -1,3 +1,4 @@
+/* Rutas */
 export const routes = {
     themes: {
         dark: `assets/styles/themes/dark-styles.css`,
