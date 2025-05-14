@@ -1,6 +1,6 @@
 // Lógica para el cambio de idioma
-import { partialsLoader, pageLoader } from "assets/scripts/loaders.js";
-import { loadTheme, toggleTheme } from 'assets/scripts/theme-toggle.js';
+import { partialsLoader, pageLoader } from "./loaders.js";
+import { loadTheme, toggleTheme } from './theme-toggle.js';
 
 const getCurrentPage = () => {
     return window.location.hash?.replace('#', '') || 'home';
