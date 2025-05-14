@@ -1,74 +1,153 @@
-﻿:root {
-    --black: #000000;              /* Fondo principal */
-    --charcoal-blue: #151D27;      /* Header */
-    --slate-blue: #1E2A39;         /* Secciones importantes o componentes secundarios */
-    --steel-blue: #3A506B;         /* Contenedores o áreas secundarias */
-    --cobalt-blue: #46678C;        
-    --denim-blue: #5C81A5;         
-    --lapis-blue: #6A96BE;         /* Combinación de fondo */
-    --powder-blue: #87AFC7;        /* Bordes o separadores */
-    --electricBlue: #58A6FF;       /* Texto principal sobre fondo oscuro */
+﻿/* Colores oscuros */
+    :root {
+        --black: #000000;              /* Fondo principal */
+        --charcoal-blue: #151D27;      /* Header */
+        --slate-blue: #1E2A39;         /* Secciones importantes o componentes secundarios */
+        --steel-blue: #3A506B;         /* Contenedores o áreas secundarias */
+        --cobalt-blue: #46678C;        
+        --denim-blue: #5C81A5;         
+        --lapis-blue: #6A96BE;         /* Combinación de fondo */
+        --powder-blue: #87AFC7;        /* Bordes o separadores */
+        --electricBlue: #58A6FF;       /* Texto principal sobre fondo oscuro */
 
-    /*Botones */
-    --electricBlue: #58A6FF;
-    --brightRed: #FF6B6B;
-    --vividGreen: #68E873;
-    --goldenYellow: #FFE247;
-    --deepPurple: #9747FF;
-    --hotPink: #FF69B4;
-    --brillantCian: #56D7D9;
-}
+        /*Botones */
+        --electricBlue: #58A6FF;
+        --brightRed: #FF6B6B;
+        --vividGreen: #68E873;
+        --goldenYellow: #FFE247;
+        --deepPurple: #9747FF;
+        --hotPink: #FF69B4;
+        --brillantCian: #56D7D9;
+    }
 
-body.dark-mode {
-    background-color: var(--black);
-    color: var(--electricBlue);
-}
+/* Cuerpo */
+    body.dark-mode {
+        background-color: var(--black);
+        color: var(--electricBlue);
+    }
 
 /* Barra lateral */
-body.dark-mode .sidebar {
-    background-color: #1e1e1e;
-    color: #f5f5f5;
-}
+    body.dark-mode .sidebar {
+        background-color: #1e1e1e;
+        color: #f5f5f5;
+    }
 
-body.dark-mode .sidebar a {
-    color: #f5f5f5;
-}
+    body.dark-mode .sidebar a {
+        color: #f5f5f5;
+    }
 
-body.dark-mode .sidebar a:hover {
-    background-color: #333;
-}
+    body.dark-mode .sidebar a:hover {
+        background-color: #333;
+    }
 
 /* Encabezado */
-body.dark-mode .main-header {
-    background-color: #1a1a1a;
-    color: #f5f5f5;
-}
+    body.dark-mode .main-header {
+        background-color: #1a1a1a;
+        color: #f5f5f5;
+    }
 
 /* Logo */
-body.dark-mode .logo {
-    color: #f5f5f5;
-}
+    body.dark-mode .logo {
+        color: #f5f5f5;
+    }
 
 /* Cambio de tema */
-.dark-mode .theme-toggle {
-    background-color: var(--powder-blue);
-    box-shadow: inset 0 8px 60px rgb(255, 255, 255),
-                inset 8px 0 8px rgb(255, 255, 255),
-                inset 0 -4px 4px rgb(255, 255, 255);
-}
+    .dark-mode .theme-toggle {
+        background-color: var(--powder-blue);
+        box-shadow: inset 0 8px 60px rgb(255, 255, 255),
+                    inset 8px 0 8px rgb(255, 255, 255),
+                    inset 0 -4px 4px rgb(255, 255, 255);
+    }
 
-.dark-mode .toggle-indicator {
-    transform: translateX(0em);
-    background-color: var(--slate-blue);
-    box-shadow: var(--charcoal-blue);
-}
+    .dark-mode .toggle-indicator {
+        transform: translateX(0em);
+        background-color: var(--slate-blue);
+        box-shadow: var(--charcoal-blue);
+    }
 
-.dark-mode .toggle-icon {
-    color: var(--denim-blue);
-}
+    .dark-mode .toggle-icon {
+        color: var(--denim-blue);
+    }
 
 /* Selector de lenguaje */
-body.dark-mode #language-selector {
-    background-color: #2a2a2a;
-    color: #f5f5f5;
-}
+    body.dark-mode #language-selector {
+        background-color: #2a2a2a;
+        color: #f5f5f5;
+    }
+
+/* Estilos del pie de página */
+    .dark-mode .footer-socials .linkedin i {
+        color: var(--electricBlue);
+    }
+    .dark-mode .footer-socials .linkedin:hover i {
+        text-shadow: 0 0 6px var(--electricBlue);
+    }
+
+    .dark-mode .footer-socials .github i {
+        color: var(--deepPurple);
+    }
+    .dark-mode .footer-socials .github:hover i {
+        text-shadow: 0 0 6px var(--deepPurple);
+    }
+
+    .dark-mode .footer-socials .facebook i {
+        color: var(--brillantCian);
+    }
+    .dark-mode .footer-socials .facebook:hover i {
+        text-shadow: 0 0 6px var(--brillantCian);
+    }
+
+    .dark-mode .footer-socials .twitter i {
+        color: var(--powder-blue);
+    }
+    .dark-mode .footer-socials .twitter:hover i {
+        text-shadow: 0 0 6px var(--powder-blue);
+    }
+
+    .dark-mode .footer-socials .youtube i {
+        color: var(--brightRed);
+    }
+    .dark-mode .footer-socials .youtube:hover i {
+        text-shadow: 0 0 6px var(--brightRed);
+    }
+
+
+
+/* Estilos del home */
+    .dark-mode .home-text {
+        color: var(--electricBlue);
+    }
+
+    .dark-mode .home-title {
+        color: var(--electricBlue);
+    }
+
+    .dark-mode .home-title-name {
+        color: var(--brillantCian);
+    }
+
+    .dark-mode .home-subtitle {
+        color: var(--powder-blue);
+    }
+
+    .dark-mode .home-description {
+        color: var(--powder-blue);
+    }
+
+    .dark-mode .button.home-button {
+        background-color: var(--electricBlue);
+        color: var(--black);
+    }
+
+    .dark-mode .button.home-button:hover {
+        background-color: var(--cobalt-blue);
+        color: var(--white);
+    }
+
+
+
+
+
+
+
+

@@ -13,3 +13,31 @@ body {
     transition: background-color 0.5s ease;
 }
 
+/* Secciones */
+section {
+    width: 100%;
+    padding: 5vh 5vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 4vw;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+}
+
+/* Botón */
+.button {
+    padding: 0.8rem 1.8rem;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-family: 'Jost', sans-serif;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: fit-content;
+}
+
+.button:hover {
+    transform: scale(1.05);
+}
+
