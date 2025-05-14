@@ -7,3 +7,14 @@
         width: 100%;
         z-index: 1000;
     }
+
+    .footer-socials {
+    margin-bottom: 1rem;
+    }
+
+    .social-icon {
+    margin: 0 10px;
+    font-size: 30px;
+    transition: color 0.3s ease;
+    text-decoration: none;
+    }

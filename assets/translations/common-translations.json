@@ -5,9 +5,9 @@
     "projectsLabel": "Proyectos",
     "skillsLabel": "Habilidades",
     "contactLabel": "Contacto",
-    "copy": "&copy; 2025 Mi Sitio Web. Todos los derechos reservados.",
     "es": "Español",
-    "en": "Inglés"
+    "en": "Inglés",
+    "footer-text": "<span id=\"year\"></span> Osdrey - Todos los derechos reservados."
   },
   "en": {
     "homeLabel": "Home",
@@ -15,8 +15,8 @@
     "projectsLabel": "Projects",
     "skillsLabel": "Skills",
     "contactLabel": "Contact",
-    "copy": "&copy; 2025 My Website. All rights reserved.",
     "es": "Spanish",
-    "en": "English"
+    "en": "English",
+    "footer-text": "<span id=\"year\"></span> Osdrey - All rights reserved."
   }
 }

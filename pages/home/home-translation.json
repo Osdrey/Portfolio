@@ -1,10 +1,14 @@
 {
   "es": {
-    "welcome": "Bienvenido a mi portafolio",
-    "description": "Desarrollador y Analista en Ciberseguridad."
+    "home-title": "Hola, soy <span class='home-title-name'>Oscar</span>",
+    "home-subtitle": "Desarrollador Web",
+    "home-description": "Experiencia en liderazgo operativo, resolución de problemas y desarrollo de herramientas internas que mejoran procesos aplicando metodologías enfocadas en eficiencia y trabajo en equipo. Estudiante en búsqueda de oportunidades para aplicar mis conocimientos y seguir creciendo profesionalmente como desarrollador.",
+    "home-button": "Contáctame"
   },
   "en": {
-    "welcome": "Welcome to my portfolio",
-    "description": "Developer and Cybersecurity Analyst."
+    "home-title": "Hi, I'm <span class='home-title-name'>Oscar</span>",
+    "home-subtitle": "Web Developer",
+    "home-description": "Experience in operational leadership, problem-solving, and the development of internal tools that improve processes by applying methodologies focused on efficiency and teamwork. Student seeking opportunities to apply my knowledge and continue growing professionally as a developer.",
+    "home-button": "Contact Me"
   }
 }
