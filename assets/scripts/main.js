@@ -1,5 +1,5 @@
 // Script principal
-import { themeLoader, partialsLoader } from './loaders.js';
+import { themeLoader, partialsLoader, handleRouteChange } from './loaders.js';
 import { loadTheme, toggleTheme } from './theme-toggle.js';
 import { setupLanguageSelector } from './language-selector.js';
 
@@ -18,7 +18,11 @@ const init = async () => {
     console.warn('No se encontró el contenedor .theme-toggle');
   }
   // Carga del cambio de lenguaje
-  setupLanguageSelector();
+  setupLanguageSelector();    
+  // Cambios en la URL
+  window.addEventListener('hashchange', handleRouteChange);
+  // Controlador de rutas
+  handleRouteChange();
 };
 
 init();
