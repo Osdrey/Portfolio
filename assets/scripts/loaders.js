@@ -18,11 +18,21 @@ const loadStylesheet = (href, isPageStyle = false) => {
   });
 };
 
+// Eliminador de estilos de pages
+const clearPageStyles = () => {
+  const links = document.querySelectorAll('link[rel="stylesheet"][data-page-style]');
+  links.forEach(link => {
+    document.head.removeChild(link);
+  });
+};
+
 // Carga de temas (dark y light)
 export const themeLoader = async () => {
   await loadStylesheet(routes.themes.dark);
   await loadStylesheet(routes.themes.light);
+
   const isDark = localStorage.getItem('dark-mode') === 'true';
+
   if (isDark) {
     document.body.classList.add('dark-mode');
     document.body.classList.remove('light-mode');
@@ -41,10 +51,12 @@ export const translationsLoader = async (jsonPath) => {
   const lang = getCurrentLang();
   const data = await fetch(jsonPath).then(res => res.json());
   const translations = data[lang];
+
   if (!translations) {
     console.warn(`No hay traducciones para el idioma: ${lang}`);
     return;
   }
+
   Object.entries(translations).forEach(([id, text]) => {
     const el = document.getElementById(id);
     if (el) el.textContent = text;
@@ -60,4 +72,21 @@ export const partialsLoader = async () => {
     await loadStylesheet(content.css);
   }
   await translationsLoader(routes.common.json);
+};
+
+// Carga dinámica de pages
+export const pageLoader = async (page = 'home') => {
+  const pageContent = routes.pages[page];
+  const html = await fetch(pageContent.html).then(res => res.text());
+  document.getElementById('home').innerHTML = html;
+  clearPageStyles();
+  await loadStylesheet(pageContent.css);
+  await translationsLoader(pageContent.json);
+};
+
+// Controlador de rutas
+export const handleRouteChange = async () => {
+  const hash = window.location.hash || '#home';
+  const page = hash.replace('#', '');
+  await pageLoader(page);
 };
