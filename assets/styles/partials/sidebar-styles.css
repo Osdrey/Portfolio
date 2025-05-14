@@ -1,4 +1,4 @@
-/* Sidebar */
+/* Barra lateral */
     .sidebar {
         position: fixed;
         top: 60px;
@@ -10,7 +10,7 @@
         z-index: 999;
     }
     
-    /* Sidebar expandido */
+/* Barra expandida */
     .sidebar.open {
         width: 200px;
     }
@@ -46,7 +46,7 @@
         text-align: center;
     }
     
-/* Hide sidebar text */
+/* Ocultar texto de la barra */
     .sidebar span {
         white-space: nowrap;
         opacity: 0;
