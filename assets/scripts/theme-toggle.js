@@ -1,35 +1,21 @@
-document.addEventListener("DOMContentLoaded", () => {
-    const path = window.location.pathname;
-    const pageName = path.substring(path.lastIndexOf("/") + 1, path.lastIndexOf("."));
+// Lógica para el cambio de tema
+const body = document.querySelector('body');
 
-    const toggleButton = document.getElementById("theme-toggle");
-    const savedTheme = localStorage.getItem("theme") || "dark";
+export const loadTheme = () => {
+  const icon = document.querySelector('.toggle-icon');
+  const darkmode = localStorage.getItem('dark-mode') === 'true';
+  body.classList.add(darkmode ? 'dark-mode' : 'light-mode');
+  icon.classList.add(darkmode ? 'fa-moon' : 'fa-sun');
+  icon.classList.remove('animated');
+};
 
-    loadThemeStyles(savedTheme, pageName);
-
-    function loadThemeStyles(theme) {
-        const linkId = "theme-stylesheet";
-        let existingLink = document.getElementById(linkId);
-
-        if (existingLink) {
-            existingLink.href = `assets/styles/${theme}-styles.css`;
-        } else {
-            const link = document.createElement("link");
-            link.rel = "stylesheet";
-            link.href = `assets/styles/${theme}-styles.css`;
-            link.id = linkId;
-            document.head.appendChild(link);
-        }
-
-        document.body.classList.remove("light-mode", "dark-mode");
-        document.body.classList.add(`${theme}-mode`);
-        localStorage.setItem("theme", theme);
-    }
-
-    loadThemeStyles(savedTheme);
-
-    toggleButton.addEventListener("click", () => {
-        const newTheme = document.body.classList.contains("light-mode") ? "dark" : "light";
-        loadThemeStyles(newTheme);
-    });
-});
+export const toggleTheme = () => {
+  const icon = document.querySelector('.toggle-icon');
+  const isDarkMode = body.classList.toggle('dark-mode');
+  body.classList.toggle('light-mode', !isDarkMode);
+  icon.classList.toggle('fa-moon', isDarkMode);
+  icon.classList.toggle('fa-sun', !isDarkMode);
+  icon.classList.add('animated');
+  localStorage.setItem('dark-mode', isDarkMode);
+  setTimeout(() => icon.classList.remove('animated'), 500);
+};

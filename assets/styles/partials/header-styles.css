@@ -1,4 +1,4 @@
-/* Header */
+/* Encabezado */
   .main-header {
       position: fixed;
       top: 0;
@@ -12,7 +12,7 @@
       z-index: 1000;
   }  
 
-/* Container header + main */
+/* Contenedor de encabezado */
   .logo {
       font-weight: bold;
       font-size: 1.5rem;
@@ -32,6 +32,7 @@
       cursor: pointer;
   }
 
+ /* Selector de lenguaje */ 
   #language-selector {
       border: none;
       padding: 5px;

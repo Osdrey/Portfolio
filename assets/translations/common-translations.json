@@ -1,0 +1,22 @@
+{
+  "es": {
+    "homeLabel": "Inicio",
+    "aboutMeLabel": "Sobre mí",
+    "projectsLabel": "Proyectos",
+    "skillsLabel": "Habilidades",
+    "contactLabel": "Contacto",
+    "copy": "&copy; 2025 Mi Sitio Web. Todos los derechos reservados.",
+    "es": "Español",
+    "en": "Inglés"
+  },
+  "en": {
+    "homeLabel": "Home",
+    "aboutMeLabel": "About Me",
+    "projectsLabel": "Projects",
+    "skillsLabel": "Skills",
+    "contactLabel": "Contact",
+    "copy": "&copy; 2025 My Website. All rights reserved.",
+    "es": "Spanish",
+    "en": "English"
+  }
+}
