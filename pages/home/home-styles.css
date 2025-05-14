@@ -1,3 +1,95 @@
-h1 {
-    color:aquamarine
+/* Texto */
+.home-text {
+    flex: 1;
+    min-width: 280px;
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.home-title {
+    font-size: 3rem;
+    font-weight: bold;
+    margin: 0;
+    font-family: 'Bebas Neue', sans-serif;
+}
+
+.home-subtitle {
+    font-size: 1.8rem;
+    font-weight: 400;
+    margin: 0;
+    font-family: 'Fira Sans Condensed', sans-serif;
+}
+
+.home-description {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    font-family: 'Jost', sans-serif;
+    opacity: 0.9;
+}
+
+/* Imagen */
+.home-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 500px;
+    min-width: 250px;
+    animation: floating 4s ease-in-out infinite;
+}
+
+.home-image img {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    rotate: 8deg;
+    opacity: 0.85;
+}
+
+/* Animación */
+@keyframes floating {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0); }
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    section {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .home-text, .home-image {
+        max-width: 90%;
+    }
+
+    .home-title {
+        font-size: 2.5rem;
+    }
+
+    .home-subtitle {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .home-title {
+        font-size: 2rem;
+    }
+
+    .home-subtitle {
+        font-size: 1.3rem;
+    }
+
+    .home-description {
+        font-size: 1rem;
+    }
+
+    .home-image img {
+        max-width: 90%;
+        rotate: 0deg;
+    }
 }

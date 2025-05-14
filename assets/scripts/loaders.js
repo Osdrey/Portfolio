@@ -28,6 +28,7 @@ const clearPageStyles = () => {
 
 // Carga de temas (dark y light)
 export const themeLoader = async () => {
+  await loadStylesheet('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css');
   await loadStylesheet(routes.themes.dark);
   await loadStylesheet(routes.themes.light);
 
@@ -59,7 +60,7 @@ export const translationsLoader = async (jsonPath) => {
 
   Object.entries(translations).forEach(([id, text]) => {
     const el = document.getElementById(id);
-    if (el) el.textContent = text;
+    if (el) el.innerHTML = text;
   });
 };
 
@@ -71,6 +72,8 @@ export const partialsLoader = async () => {
     document.getElementById(id).innerHTML = html;
     await loadStylesheet(content.css);
   }
+  const year = document.getElementById('year');
+  if (year) year.textContent = new Date().getFullYear();
   await translationsLoader(routes.common.json);
 };
 
