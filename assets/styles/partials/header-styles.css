@@ -1,46 +1,46 @@
 /* Encabezado */
-  .main-header {
-      position: fixed;
-      top: 0;
-      left: 0;
-      height: 60px;
-      width: 100%;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 0 20px;
-      z-index: 1000;
-  }  
+  .header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 60px;
+    width: 100%;
+    padding: 0 20px;
+    backdrop-filter: blur(10px);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+  } 
 
 /* Contenedor de encabezado */
   .logo {
-      font-weight: bold;
-      font-size: 1.5rem;
-      text-decoration: none;
+    font-weight: bold;
+    font-size: 1.5rem;
+    text-decoration: none;
   }
 
   .header-controls {
-      display: flex;
-      align-items: center;
-      gap: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
   }
 
   #toggle-theme {
-      background: none;
-      border: none;
-      font-size: 1.2rem;
-      cursor: pointer;
+    background: none;
+    border: none;
+    font-size: 1.2rem;
+    cursor: pointer;
   }
 
- /* Selector de lenguaje */ 
   #language-selector {
-      border: none;
-      padding: 5px;
-      border-radius: 5px;
-      font-size: 0.9rem;
+    border: none;
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 0.9rem;
   }
 
-/* Botón deslizable de cambio de tema */
   .theme-toggle {
     width: 4em;
     height: 2em;

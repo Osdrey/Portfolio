@@ -1,4 +1,7 @@
 import { routes } from './routes.js';
+import { loadTheme, toggleTheme } from './theme-toggle.js';
+import { setupLanguageSelector } from './language-selector.js';
+import { initSidebar } from './sidebar-toggle.js';
 
 // Carga dinámica de hojas de estilo
 const loadStylesheet = (href, isPageStyle = false) => {
@@ -18,12 +21,24 @@ const loadStylesheet = (href, isPageStyle = false) => {
   });
 };
 
-// Eliminador de estilos de pages
+// Eliminador de estilos de páginas
 const clearPageStyles = () => {
   const links = document.querySelectorAll('link[rel="stylesheet"][data-page-style]');
   links.forEach(link => {
     document.head.removeChild(link);
   });
+};
+
+// Reasignador de eventos para cargas dinamicas
+export const reassignEvents = () => {
+  const toggle = document.querySelector('.theme-toggle');
+  if (toggle) {
+    toggle.removeEventListener('click', toggleTheme);
+    toggle.addEventListener('click', toggleTheme);
+  }
+  loadTheme();
+  setupLanguageSelector();
+  initSidebar();
 };
 
 // Carga de temas (dark y light)
@@ -62,6 +77,12 @@ export const translationsLoader = async (jsonPath) => {
     const el = document.getElementById(id);
     if (el) el.innerHTML = text;
   });
+  document.querySelectorAll('[data-tooltip]').forEach(elem => {
+    const key = elem.getAttribute('data-tooltip');
+    if (translations[key]) {
+      elem.setAttribute('data-tooltip', translations[key]);
+    }
+  });
 };
 
 // Carga dinámica de partials: header, sidebar, footer con sus estilos
@@ -75,21 +96,24 @@ export const partialsLoader = async () => {
   const year = document.getElementById('year');
   if (year) year.textContent = new Date().getFullYear();
   await translationsLoader(routes.common.json);
+  reassignEvents();
 };
 
-// Carga dinámica de pages
-export const pageLoader = async (page = 'home') => {
-  const pageContent = routes.pages[page];
-  const html = await fetch(pageContent.html).then(res => res.text());
-  document.getElementById('home').innerHTML = html;
+// Carga dinámica de páginas
+export const pageLoader = async () => {
   clearPageStyles();
-  await loadStylesheet(pageContent.css);
-  await translationsLoader(pageContent.json);
-};
+  for (const [pageId, content] of Object.entries(routes.pages)) {
+    const html = await fetch(content.html).then(res => res.text());
+    const pageElement = document.getElementById(pageId);
 
-// Controlador de rutas
-export const handleRouteChange = async () => {
-  const hash = window.location.hash || '#home';
-  const page = hash.replace('#', '');
-  await pageLoader(page);
+    if (pageElement) {
+      pageElement.innerHTML = html;
+    } else {
+      console.warn(`No se encontró la sección: ${pageId}`);
+    }
+
+    await loadStylesheet(content.css, true);
+    await translationsLoader(content.json);
+  }
+  reassignEvents();
 };
