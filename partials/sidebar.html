@@ -1,32 +1,32 @@
-<ul class="sidebar-menu sidebar">
-  <li>
-    <a href="#home">
-      <i class="fas fa-home"></i>
-      <span id="homeLabel"></span>
-    </a>
-  </li>
-  <li>
-    <a href="#aboutMe">
-      <i class="fas fa-user"></i>
-      <span id="aboutMeLabel"></span>
-    </a>
-  </li>
-  <li>
-    <a href="#projects">
-      <i class="fas fa-laptop-code"></i>
-      <span id="projectsLabel"></span>
-    </a>
-  </li>
-  <li>
-    <a href="#skills">
-      <i class="fas fa-cogs"></i>
-      <span id="skillsLabel"></span>
-    </a>
-  </li>
-  <li>
-    <a href="#contact">
-      <i class="fas fa-envelope"></i>
-      <span id="contactLabel"></span>
-    </a>
-  </li>
-</ul>
+<div class="inner">
+    <button data-tooltip="menuTooltip" class="burger" id="toggleSidebar" >
+        <i class="fas fa-bars"></i>
+        <p id="menuLabel">Menu</p>
+    </button>
+    <nav>
+        <button data-tooltip="homeTooltip" data-section="home" onclick="location.href='#home'" >
+            <i class="fas fa-house"></i>
+            <p id="homeLabel"></p>
+        </button>
+
+        <button data-tooltip="aboutMeTooltip" data-section="aboutMe" onclick="location.href='#aboutme'">
+            <i class="fas fa-user"></i>
+            <p id="aboutMeLabel"></p>
+        </button>
+
+        <button data-tooltip="projectsTooltip" data-section="projects" onclick="location.href='#projects'">
+            <i class="fas fa-laptop-code"></i>
+            <p id="projectsLabel"></p>
+        </button>
+
+        <button data-tooltip="skillsTooltip" data-section="skills" onclick="location.href='#skills'">
+            <i class="fas fa-tools"></i>
+            <p id="skillsLabel"></p>
+        </button>
+
+        <button data-tooltip="contactTooltip" data-section="contact" onclick="location.href='#contact'">
+            <i class="fas fa-envelope"></i>
+            <p id="contactLabel"></p>
+        </button>
+    </nav>
+</div>
