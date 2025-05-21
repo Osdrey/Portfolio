@@ -1,43 +1,67 @@
-﻿/* Estilos comunes */
+﻿/* Reset general */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    scroll-behavior: smooth;
+    scroll-margin-top: 70px;
 }
 
+/* Layout principal */
 body {
+    min-height: 100vh;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+    flex-direction: column;
     transition: background-color 0.5s ease;
 }
 
-/* Secciones */
+/* Fondo oscuro translúcido */
+body::after {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: 0;
+}
+
+/* Contenido principal */
+.main-content {
+    margin-left: 56px;
+    margin-top: 70px;
+    margin-bottom: 105px;
+    padding: 10px 10px 10px 20px;    
+    flex: 1;
+    position: relative;
+    z-index: 1;
+}
+
+/* Secciones internas */
 section {
-    width: 100%;
-    padding: 5vh 5vw;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 4vw;
-    flex-wrap: wrap;
-    box-sizing: border-box;
-}
-
-/* Botón */
-.button {
-    padding: 0.8rem 1.8rem;
-    border: none;
+    min-height: calc(100vh - 150px);
+    padding: 20px;
+    margin-bottom: 10px;
     border-radius: 8px;
-    font-size: 1rem;
-    font-family: 'Jost', sans-serif;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    width: fit-content;
+    z-index: 1;
 }
 
-.button:hover {
-    transform: scale(1.05);
-}
+/* Responsividad */
+    @media (max-width: 768px) {
+        .main-content {
+            margin-left: 0;
+            padding: 10px 15px 10px 15px;
+        }
 
+        section {
+            padding: 15px;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .main-content {
+            padding: 10px;
+        }
+
+        section {
+            padding: 10px;
+            font-size: 0.95rem;
+        }
+    }

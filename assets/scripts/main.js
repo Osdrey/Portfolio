@@ -1,7 +1,8 @@
 // Script principal
-import { themeLoader, partialsLoader, handleRouteChange } from './loaders.js';
+import { themeLoader, partialsLoader, pageLoader } from './loaders.js';
 import { loadTheme, toggleTheme } from './theme-toggle.js';
 import { setupLanguageSelector } from './language-selector.js';
+import { initSidebar } from "./sidebar-toggle.js";
 
 const init = async () => {
   // Carga de estilos
@@ -9,7 +10,9 @@ const init = async () => {
   // Carga de header, sidebar, footer      
   await partialsLoader();
   // Carga del tema seleccionado
-  loadTheme();                
+  loadTheme();
+  // Carga de la barra lateral
+  initSidebar();                
   // Activacióm de cambio de tema
   const toggle = document.querySelector('.theme-toggle');
   if (toggle) {
@@ -18,11 +21,9 @@ const init = async () => {
     console.warn('No se encontró el contenedor .theme-toggle');
   }
   // Carga del cambio de lenguaje
-  setupLanguageSelector();    
-  // Cambios en la URL
-  window.addEventListener('hashchange', handleRouteChange);
-  // Controlador de rutas
-  handleRouteChange();
+  setupLanguageSelector();  
+  // Carga de páginas  
+  await pageLoader()
 };
 
 init();
