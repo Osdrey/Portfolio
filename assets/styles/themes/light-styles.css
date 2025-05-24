@@ -202,6 +202,58 @@
   }
 
 /* Estilos del aboutMe */
-  .light-mode .aboutMe-title {
-    color: var(--dark-cyan);
+  .light-mode .aboutMe-greeting {
+    color: var(--dark-sky-blue);
+  }
+
+  .light-mode .aboutMe-name {
+    color: var(--dark-azure-blue);
+  }
+
+  .light-mode .aboutMe-nickname {
+    color: var(--dark-sky-blue);
+  }
+
+  .light-mode .aboutMe-intro {
+    color: var(--dark-azure-blue);
+  }
+
+  .light-mode .btn.projects {
+    background: var(--dark-cobalt-blue);
+    color: var(--sky-blue-light);
+    border-color: var(--dark-cobalt-blue);
+  }
+
+  .light-mode .btn.curriculum {
+    border: 2px solid var(--dark-cobalt-blue);
+    color: var(--dark-cobalt-blue);
+  }
+
+  .light-mode .btn.projects:hover {
+    box-shadow: 0 0 6px var(--powder-blue-light),
+                0 0 12px var(--slate-blue-dark),
+                inset 0 0 4px var(--black);
+  }
+
+  .light-mode .btn.curriculum:hover {
+    box-shadow: 0 0 6px var(--dark-cobalt-blue),
+                0 0 12px var(--dark-azure-blue),
+                inset 0 0 4px var(--baby-blue);
+  }
+
+  .light-mode .aboutMe-image {
+    box-shadow: 0 0 15px var(--dark-cobalt-blue),
+                0 0 15px var(--dark-cobalt-blue);
+  }
+
+  .light-mode .stat-number {
+    color: var(--dark-cobalt-blue);
+  }
+
+  .light-mode .stat-label {
+    color: var(--black);
+  }
+
+  .light-mode .divider {
+    background: var(--black);
   }

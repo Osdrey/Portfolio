@@ -39,6 +39,8 @@ export const reassignEvents = () => {
   loadTheme();
   setupLanguageSelector();
   initSidebar();
+  fileLoader();
+  imageLoader();
 };
 
 // Carga de temas (dark y light)
@@ -128,4 +130,46 @@ export const pageLoader = async () => {
     }
   }
   reassignEvents();
+};
+
+export const fileLoader = () => {
+  const lang = getCurrentLang();
+  const button = document.getElementById('curriculum-btn');
+
+  if (!button) return;
+  const files = {
+    es: {
+      url: routes.files.hv,
+    },
+    en: {
+      url: routes.files.cv,
+    }
+  };
+
+  const file = files[lang] || files['es'];
+  button.onclick = () => window.open(file.url, '_blank');
+};
+
+export const imageLoader = () => {
+  const isDark = localStorage.getItem('dark-mode') === 'true';
+  const images = document.querySelectorAll('[data-image-key]');
+
+  images.forEach(img => {
+    const key = img.getAttribute('data-image-key');
+    let src;
+
+    switch (key) {
+      case 'home':
+        src = isDark ? routes.images.dark : routes.images.light;
+        break;
+      case 'aboutMe':
+        src = isDark ? routes.images.darkProfile : routes.images.lightProfile;
+        break;
+      default:
+        console.warn(`No se reconoce la clave de imagen: ${key}`);
+        return;
+    }
+
+    img.src = src;
+  });
 };
