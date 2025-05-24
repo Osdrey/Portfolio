@@ -55,9 +55,9 @@
   /* Cambio de tema */
     .light-mode .theme-toggle {
       background-color: var(--sky-blue-light);
-      box-shadow: inset 0 8px 60px var(--black),
-                  inset 8px 0 8px var(--black),
-                  inset 0 -4px 4px var(--black);
+      box-shadow: inset 0 8px 60px var(--dark-gray),
+                  inset 8px 0 8px var(--dark-gray),
+                  inset 0 -4px 4px var(--dark-gray);
     }
 
     .light-mode .toggle-indicator {
@@ -159,34 +159,46 @@
     .light-mode .social-icon::after { color: var(--black); }
 
 /* Estilos del home */
-  .light-mode .home-text {
-    color: var(--dark-cobalt-blue);
+  .light-mode .image-container {
+    border: 0.2rem solid var(--steel-blue-light);
+    box-shadow: 0 0 1.2rem var(--dark-azure-blue), 0 0 2rem var(--dark-azure-blue) inset;
   }
 
-  .light-mode .home-title {
-    color: var(--dark-cobalt-blue);
+  .light-mode .light-image {
+    display: block;
   }
 
-  .light-mode .home-title-name {
-    color: var(--dark-cyan);
+  .light-mode .dark-image {
+    display: none;
   }
 
-  .light-mode .home-subtitle {
-    color: var(--slate-blue-dark);
+  .light-mode .welcome-container {
+    background-color: var(--steel-blue-light);
+    box-shadow: 0 0 1.2rem var(--dark-azure-blue), 0 0 2rem var(--dark-azure-blue) inset;
   }
 
-  .light-mode .home-description {
-    color: var(--slate-blue-dark);
+  .light-mode .welcome-text {
+    color: var(--black);
+    text-shadow: 0 0 1rem var(--baby-blue), 0 0 2rem var(--baby-blue);
   }
 
-  .light-mode .button.home-button {
-    background-color: var(--dark-cobalt-blue);
-    color: var(--light-gray);
+  .light-mode .welcome-text span {
+    animation: flicker 0.5s ease forwards;
   }
 
-  .light-mode .button.home-button:hover {
-    background-color: var(--cornflower-blue);
-    color: var(--light-gray);
+  .light-mode .name {
+    background: linear-gradient(to top, var(--dark-azure-blue) 50%, var(--black) 50%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .light-mode .name-wrapper {
+    filter: drop-shadow(0 0 5px var(--baby-blue));
+  }
+
+  .light-mode .occupation {
+    color: var(--black);
   }
 
 /* Estilos del aboutMe */

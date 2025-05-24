@@ -1,33 +1,33 @@
 ﻿/* Colores oscuros */
 	:root {
-  /* Grises */
-		--black: #000000;               /* Fondo principal */
-		--onyx-gray: #1A1A1A;           /* Partials: header, footer, sidebars */
-		--graphite-gray: #2B2B2B;       /* Secciones importantes o componentes secundarios */
-		--slate-gray: #3C3C3C;          /* Contenedores o áreas secundarias */
-		--granite-gray: #4D4D4D;        /* Bordes o separadores */
+    /* Grises */
+      --black: #000000;               /* Fondo principal */
+      --onyx-gray: #1A1A1A;           /* Partials: header, footer, sidebars */
+      --graphite-gray: #2B2B2B;       /* Secciones importantes o componentes secundarios */
+      --slate-gray: #3C3C3C;          /* Contenedores o áreas secundarias */
+      --granite-gray: #4D4D4D;        /* Bordes o separadores */
 
-  /* Azules oscuros - para fondos con contraste o hover */
-		--slate-blue: #1E2A39;          /* Fondo alternativo para secciones o modales */
-		--steel-blue: #3A506B;          /* Hover de botones o tarjetas */
-		--cobalt-blue: #46678C;         /* Fondo de tarjetas activas o elementos destacados */
-		--denim-blue: #5C81A5;          /* Fondo de inputs o elementos interactivos */
+    /* Azules oscuros - para fondos con contraste o hover */
+      --slate-blue: #1E2A39;          /* Fondo alternativo para secciones o modales */
+      --steel-blue: #3A506B;          /* Hover de botones o tarjetas */
+      --cobalt-blue: #46678C;         /* Fondo de tarjetas activas o elementos destacados */
+      --denim-blue: #5C81A5;          /* Fondo de inputs o elementos interactivos */
 
-  /* Azules claros - para texto e íconos */
-		--electric-blue: #3498db;       /* Títulos o botones */
-		--azure-blue: #58A6FF;          /* Texto principal sobre fondo oscuro */
-		--sky-blue: #76B9FF;            /* Enlaces o íconos */
-		--ice-blue: #9DCFFF;            /* Texto secundario */
-		--powder-blue: #C4E0FF;         /* Detalles sutiles, bordes suaves o etiquetas*/
-		--white: #fcfcfc; 							 /* Detalles fuertes y notables*/
+    /* Azules claros - para texto e íconos */
+      --electric-blue: #3498db;       /* Títulos o botones */
+      --azure-blue: #58A6FF;          /* Texto principal sobre fondo oscuro */
+      --sky-blue: #76B9FF;            /* Enlaces o íconos */
+      --ice-blue: #9DCFFF;            /* Texto secundario */
+      --powder-blue: #C4E0FF;         /* Detalles sutiles, bordes suaves o etiquetas*/
+      --white: #fcfcfc; 				       /* Detalles fuertes y notables*/
 
-		/*Botones adicionales */
-		--bright-red: #FF6B6B;
-		--vivid-green: #68E873;
-		--golden-yellow: #FFE247;
-		--deep-purple: #9747FF;
-		--hot-pink: #FF69B4;
-		--brillant-cian: #56D7D9;
+    /*Botones adicionales */
+      --bright-red: #FF6B6B;
+      --vivid-green: #68E873;
+      --golden-yellow: #FFE247;
+      --deep-purple: #9747FF;
+      --hot-pink: #FF69B4;
+      --brillant-cian: #56D7D9;
 	}
 
 /* Cuerpo */
@@ -159,33 +159,41 @@
 		.dark-mode .social-icon::after{ color: var(--white); }
 
 /* Estilos del home */
-	.dark-mode .home-text {
-		color: var(--electric-blue);
+	.dark-mode .image-container {
+		border: 0.2rem solid var(--denim-blue);
+		box-shadow: 0 0 1.2rem var(--azure-blue), 0 0 2rem var(--azure-blue) inset;
 	}
 
-	.dark-mode .home-title {
-		color: var(--electric-blue);
+  .dark-mode .dark-image {
+    display: block;
+  }
+
+  .dark-mode .light-image {
+    display: none;
+  }
+
+	.dark-mode .welcome-container {
+		background-color: var(--denim-blue);
+		box-shadow: 0 0 1.2rem var(--azure-blue), 0 0 2rem var(--azure-blue) inset;
 	}
 
-	.dark-mode .home-title-name {
-		color: var(--brillant-cian);
+	.dark-mode .welcome-text {
+		color: var(--white);
+		text-shadow: 0 0 1rem var(--steel-blue), 0 0 2rem var(--steel-blue);
 	}
 
-	.dark-mode .home-subtitle {
-		color: var(--powder-blue);
+  .dark-mode .name {
+    background: linear-gradient(to top, var(--azure-blue) 50%, var(--white) 50%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+	.dark-mode .name-wrapper {
+		filter: drop-shadow(0 0 5px var(--steel-blue));
 	}
 
-	.dark-mode .home-description {
-		color: var(--powder-blue);
-	}
-
-	.dark-mode .button.home-button {
-		background-color: var(--electric-blue);
-		color: var(--black);
-	}
-
-	.dark-mode .button.home-button:hover {
-		background-color: var(--cobalt-blue);
+	.dark-mode .occupation {
 		color: var(--white);
 	}
 

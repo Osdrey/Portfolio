@@ -1,30 +1,30 @@
 ﻿/* Reset general */
-* {
+  * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     scroll-behavior: smooth;
     scroll-margin-top: 70px;
-}
+  }
 
 /* Layout principal */
-body {
+  body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
     transition: background-color 0.5s ease;
-}
+  }
 
 /* Fondo oscuro translúcido */
-body::after {
+  body::after {
     content: "";
     position: fixed;
     inset: 0;
     z-index: 0;
-}
+  }
 
 /* Contenido principal */
-.main-content {
+  .main-content {
     margin-left: 56px;
     margin-top: 70px;
     margin-bottom: 105px;
@@ -32,36 +32,36 @@ body::after {
     flex: 1;
     position: relative;
     z-index: 1;
-}
+  }
 
 /* Secciones internas */
-section {
+  section {
     min-height: calc(100vh - 150px);
     padding: 20px;
     margin-bottom: 10px;
     border-radius: 8px;
     z-index: 1;
-}
+  }
 
 /* Responsividad */
-    @media (max-width: 768px) {
-        .main-content {
-            margin-left: 0;
-            padding: 10px 15px 10px 15px;
-        }
-
-        section {
-            padding: 15px;
-        }
+  @media (max-width: 768px) {
+    .main-content {
+        margin-left: 0;
+        padding: 10px 15px 10px 15px;
     }
 
-    @media (max-width: 480px) {
-        .main-content {
-            padding: 10px;
-        }
-
-        section {
-            padding: 10px;
-            font-size: 0.95rem;
-        }
+    section {
+        padding: 15px;
     }
+  }
+
+  @media (max-width: 480px) {
+    .main-content {
+        padding: 10px;
+    }
+
+    section {
+        padding: 10px;
+        font-size: 0.95rem;
+    }
+  }
