@@ -13,7 +13,7 @@
     "contactTooltip": "Contacto",
     "es": "Español",
     "en": "Inglés",
-    "footer-text": "<span id=\"year\"></span> Osdrey - Todos los derechos reservados."
+    "footer-text": "<strong>®<span id=\"year\"></span> Osdrey - No hay errores, solo ideas en fase beta.</strong>"
   },
   "en": {
     "homeLabel": "Home",
@@ -29,6 +29,6 @@
     "contactTooltip": "Contact",
     "es": "Spanish",
     "en": "English",
-    "footer-text": "<span id=\"year\"></span> Osdrey - All rights reserved."
+    "footer-text": "<strong>®<span id=\"year\"></span> Osdrey - There are no errors, only ideas in beta phase.</strong>"
   }
 }

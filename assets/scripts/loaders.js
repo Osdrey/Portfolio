@@ -103,17 +103,29 @@ export const partialsLoader = async () => {
 export const pageLoader = async () => {
   clearPageStyles();
   for (const [pageId, content] of Object.entries(routes.pages)) {
-    const html = await fetch(content.html).then(res => res.text());
-    const pageElement = document.getElementById(pageId);
-
-    if (pageElement) {
-      pageElement.innerHTML = html;
-    } else {
-      console.warn(`No se encontró la sección: ${pageId}`);
+    try {
+      const html = await fetch(content.html).then(res => res.text());
+      const pageElement = document.getElementById(pageId);
+      if (pageElement) {
+        pageElement.innerHTML = html;
+      } else {
+        console.warn(`No se encontró la sección: ${pageId}`);
+      }
+      await loadStylesheet(content.css, true);
+      await translationsLoader(content.json);
+      if (content.js) {
+        try {
+          const module = await import(`../../${content.js}`);
+          if (typeof module.init === "function") {
+            module.init();
+          }
+        } catch (scriptErr) {
+          console.warn(`No se pudo cargar el script para ${pageId}:`, scriptErr);
+        }
+      }
+    } catch (err) {
+      console.error(`Error al cargar la página "${pageId}":`, err);
     }
-
-    await loadStylesheet(content.css, true);
-    await translationsLoader(content.json);
   }
   reassignEvents();
 };
