@@ -1,8 +1,36 @@
 {
   "es": {
-    "aboutMe-title": "Bienvenidos a sobre mí"
+    "aboutMe-greeting": "Hola, soy",
+    "aboutMe-name": "Oscar D. Reyes",
+    "aboutMe-nickname": "También me conocen como <strong>Osdrey</strong>",
+    "aboutMe-intro": "Estudiante de Desarrollo de Software con experiencia en liderazgo de equipos y optimización de procesos. Ha contribuido en proyectos tecnológicos que mejoran la eficiencia operativa en diferentes entornos. Apasionado por la tecnología, se encuentra en formación continua con enfoque en desarrollo <strong>back-end</strong> y <strong>ciberseguridad</strong>. En búsqueda de oportunidades para crecer profesionalmente y aportar soluciones innovadoras dentro del mundo del desarrollo.",
+    "button-projects": "<strong>Ver Proyectos</strong>",
+    "button-curriculum": "<strong>Descargar Hoja de Vida</strong>",
+    "number-1": "+4",
+    "stat-1": "Años de",
+    "stat-2": "experiencia",
+    "number-2": "+5",
+    "stat-3": "Proyectos",
+    "stat-4": "dirigidos",
+    "number-3": "1",
+    "stat-5": "Certificados",
+    "stat-6": "profesionales"
   },
   "en": {
-    "aboutMe-title": "Welcome to about me"
+    "aboutMe-greeting": "Hi, I'm",
+    "aboutMe-name": "Oscar D. Reyes",
+    "aboutMe-nickname": "Also known as <strong>Osdrey</strong>",
+    "aboutMe-intro": "Software Development student with experience in team leadership and process optimization. Contributed to tech projects that enhance operational efficiency in various environments. Passionate about technology, currently undergoing continuous training focused on <strong>back-end</strong> development and <strong>cybersecurity</strong>. Seeking opportunities to grow professionally and deliver innovative solutions in the development field.",
+    "button-projects": "<strong>View Projects</strong>",
+    "button-curriculum": "<strong>Download Resume</strong>",
+    "number-1": "+4",
+    "stat-1": "Years of",
+    "stat-2": "experience",
+    "number-2": "+5",
+    "stat-3": "Projects",
+    "stat-4": "led",
+    "number-3": "1",
+    "stat-5": "Professional",
+    "stat-6": "certificates"
   }
 }
