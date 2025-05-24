@@ -1,6 +1,277 @@
-.home-title {
-  font-size: 3rem;
-  font-weight: bold;
-  margin: 0;
-  font-family: 'Bebas Neue', sans-serif;
+.aboutMe {
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
 }
+
+/* Contenedor principal */
+  .aboutMe-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 3rem;
+    max-width: 70rem;
+    animation: fadeInUp 1s ease forwards;
+    animation-delay: 0.3s;
+    opacity: 0;
+  }
+
+/* Contenedor de texto*/
+  .aboutMe-text {
+    flex: 1;
+    animation: fadeSlideLeft 1s ease forwards;
+    animation-delay: 0.6s;
+    opacity: 0;
+  }
+
+  .aboutMe-greeting {
+    font-size: 1.3rem;
+    animation: fadeIn 0.8s ease forwards;
+    animation-delay: 0.9s;
+    opacity: 0;
+  }
+
+  .aboutMe-name {
+    font-size: 5rem;
+    animation: fadeZoomIn 1s ease forwards;
+    animation-delay: 1.2s;
+    opacity: 0;
+  }
+
+  .aboutMe-nickname {
+    font-size: 1.5rem;
+    margin: 0.5rem 0;
+    animation: fadeSlideRight 0.8s ease forwards;
+    animation-delay: 1.5s;
+    opacity: 0;
+  }
+
+  .aboutMe-intro {
+    font-size: 1.6rem;
+    margin: 1rem 0;
+    animation: fadeInUp 0.8s ease forwards;
+    animation-delay: 1.8s;
+    opacity: 0;
+  }
+
+/* Botones */
+  .aboutMe-buttons {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    animation: fadeZoomIn 1s ease forwards;
+    animation-delay: 2.1s;
+    opacity: 0;
+  }
+
+  .aboutMe-buttons .btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.8rem 1.5rem;
+    margin-right: 1rem;
+    border-radius: 30px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    cursor: pointer;
+  }
+
+  .btn.projects {
+    height: 2.5rem;
+  }
+
+  .btn.curriculum {
+    background: transparent;
+    height: 2.5rem;
+  }
+
+  .btn.projects:hover {
+    transform: scale(1.05);
+  }
+
+  .btn.curriculum:hover {
+    transform: scale(1.05);
+  }
+
+/* Contenedor de imagen*/
+  .aboutMe-profile {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    animation: fadeSlideRight 1s ease forwards;
+    animation-delay: 2.4s;
+    opacity: 0;
+  }
+
+  .aboutMe-image {
+    width: 12rem;
+    height: 25rem;
+    border-radius: 6rem;
+    object-fit: cover;
+  }
+
+/* Estadisticas */
+  .stats-column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .stat-item {
+    text-align: center;
+    animation: fadeInUp 1s ease forwards;
+    animation-delay: 2.7s;
+    opacity: 0;
+  }
+
+  .stat-number {
+    font-size: 2rem;
+    font-weight: bold;
+  }
+
+  .stat-label {
+    font-size: 0.8rem;
+  }
+
+  .divider {
+    width: 75%;
+    height: 1px;
+  }
+
+/* Animaciones */
+  @keyframes fadeSlideLeft {
+    0% {
+      opacity: 0;
+      transform: translateX(30px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes fadeSlideRight {
+    0% {
+      opacity: 0;
+      transform: translateX(-30px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes fadeInUp {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes fadeZoomIn {
+    0% {
+      opacity: 0;
+      transform: scale(0.9);
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+
+/* Responsividad */
+  @media (max-width: 1024px) {
+    .aboutMe-container {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    .aboutMe-text {
+      flex: none;
+      width: 100%;
+    }
+
+    .aboutMe-name {
+      font-size: 3.5rem;
+    }
+
+    .aboutMe-nickname {
+      font-size: 1.2rem;
+    }
+
+    .aboutMe-intro {
+      font-size: 1.3rem;
+    }
+
+    .aboutMe-buttons {
+      justify-content: center;
+    }
+
+    .aboutMe-profile {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .aboutMe-image {
+      width: 10rem;
+      height: 20rem;
+      border-radius: 5rem;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .aboutMe-profile {
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: nowrap;
+      gap: 1.5rem;
+    }
+
+    .aboutMe-image {
+      width: 9rem;
+      height: 18rem;
+      border-radius: 4.5rem;
+    }
+
+    .stats-column {
+      gap: 0.5rem;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .aboutMe-profile {
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: nowrap;
+      gap: 1rem;
+    }
+
+    .aboutMe-image {
+      width: 8rem;
+      height: 16rem;
+      border-radius: 4rem;
+    }
+
+    .stats-column {
+      gap: 0.3rem;
+    }
+
+    .stat-number {
+      font-size: 1.2rem;
+    }
+
+    .stat-label {
+      font-size: 0.7rem;
+    }
+  }

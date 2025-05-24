@@ -1,8 +1,8 @@
-window.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("DOMContentLoaded", () => {
   showElement(welcomeSection);
   createAnimatedText();
-  restartAnimationByClass(welcomeSection, "welcome-container", false);
-  restartAnimationByClass(waveEmoji, "wave-emoji", false);
+  restartAnimation(welcomeSection, true);
+  restartAnimation(waveEmoji, true);
 });
 
 const welcomeText = document.getElementById("welcome-text");
@@ -11,8 +11,8 @@ const waveEmoji = document.querySelector(".wave-emoji");
 const imageContainer = document.querySelector(".image-container");
 const nameWrapper = document.querySelector(".name-wrapper");
 const occupation = document.querySelector(".occupation");
-
-const text = welcomeText ? welcomeText.textContent.trim() : "";
+const animatedElements = [welcomeSection, waveEmoji, imageContainer, nameWrapper, occupation].filter(Boolean);
+const text = welcomeText?.textContent.trim() || "";
 
 function createAnimatedText() {
   if (!welcomeText) return;
@@ -25,76 +25,64 @@ function createAnimatedText() {
   });
 }
 
-function restartAnimationByClass(element, className, immediate = false) {
-  if (!element) return;
-  if (immediate && element === welcomeText) {
-    [...element.children].forEach(span => {
+function restartAnimation(el, immediate = false) {
+  if (!el) return;
+  const className = el.dataset.animation;
+  if (!className) return;
+
+  if (immediate && el === welcomeText) {
+    [...el.children].forEach(span => {
       span.style.animationDelay = "0s";
     });
   }
-  if (immediate) {
-    element.style.animationDelay = "0s";
-  } else {
-    element.style.animationDelay = "";
-  }
-  element.classList.remove(className);
-  void element.offsetWidth;
-  element.classList.add(className);
+
+  el.style.animationDelay = immediate ? "0s" : "";
+  el.classList.remove(className);
+  void el.offsetWidth;
+  el.classList.add(className);
 }
 
-let lastScrollY = window.scrollY || 0;
-function isScrollingUp() {
-  const currentScrollY = window.scrollY || 0;
-  const goingUp = currentScrollY < lastScrollY;
+function hideElement(el) {
+  if (!el) return;
+  el.style.opacity = "0";
+  el.style.pointerEvents = "none";
+  el.style.visibility = "hidden";
+}
+
+function showElement(el) {
+  if (!el) return;
+  el.style.opacity = "";
+  el.style.pointerEvents = "";
+  el.style.visibility = "";
+}
+
+let lastScrollY = window.scrollY;
+let goingUp = false;
+
+window.addEventListener("scroll", () => {
+  const currentScrollY = window.scrollY;
+  goingUp = currentScrollY < lastScrollY;
   lastScrollY = currentScrollY;
-  return goingUp;
-}
-
-function hideElement(element) {
-  if (!element) return;
-  element.style.opacity = "0";
-  element.style.pointerEvents = "none";
-  element.style.visibility = "hidden";
-}
-
-function showElement(element) {
-  if (!element) return;
-  element.style.opacity = "";
-  element.style.pointerEvents = "";
-  element.style.visibility = "";
-}
+});
 
 function handleEntryAnimation(entry) {
   const el = entry.target;
-  const goingUp = isScrollingUp();
   if (entry.isIntersecting) {
     showElement(el);
-    switch (el) {
-      case welcomeSection:
-        createAnimatedText();
-        restartAnimationByClass(welcomeSection, "welcome-container", goingUp);
-        restartAnimationByClass(waveEmoji, "wave-emoji", goingUp);
-        break;
-      case imageContainer:
-        restartAnimationByClass(imageContainer, "image-container", goingUp);
-        break;
-      case nameWrapper:
-        restartAnimationByClass(nameWrapper, "name-wrapper", goingUp);
-        break;
-      case occupation:
-        restartAnimationByClass(occupation, "occupation", goingUp);
-        break;
+    if (el === welcomeSection) {
+      createAnimatedText();
     }
+    restartAnimation(el, goingUp);
   } else {
     hideElement(el);
   }
 }
 
-const animatedElements = [welcomeSection, imageContainer, nameWrapper, occupation].filter(Boolean);
 const observer = new IntersectionObserver(entries => {
-  entries.forEach(entry => {
-    handleEntryAnimation(entry);
-  });
-}, { threshold: 0.5 });
+  entries.forEach(handleEntryAnimation);
+}, {
+  threshold: 0.5,
+  rootMargin: "0px 0px -10% 0px"
+});
 
 animatedElements.forEach(el => observer.observe(el));

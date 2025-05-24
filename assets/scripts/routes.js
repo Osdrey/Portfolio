@@ -34,7 +34,8 @@ export const routes = {
     aboutMe: {
       html: `pages/aboutMe/aboutMe.html`,
       css:  `pages/aboutMe/aboutMe-styles.css`,
-      json: `pages/aboutMe/aboutMe-translation.json`
+      json: `pages/aboutMe/aboutMe-translation.json`,
+      js:   `pages/aboutMe/aboutMe-scripts.js`
     },
     projects: {
       html: `pages/projects/projects.html`,
@@ -51,5 +52,17 @@ export const routes = {
       css:  `pages/contact/contact-styles.css`,
       json: `pages/contact/contact-translation.json`
     }
-  }
+  },
+
+  images: {
+    dark: `assets/images/dark-image.png`,
+    light: `assets/images/light-image.png`,
+    darkProfile: `assets/images/dark-profile.png`,
+    lightProfile: `assets/images/light-profile.png`
+  },
+
+  files: {
+    cv: `assets/files/curriculum-vitae.pdf`,
+    hv: `assets/files/hoja-de-vida.pdf`
+  },
 };
