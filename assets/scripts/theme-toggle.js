@@ -1,4 +1,5 @@
 // Lógica para el cambio de tema
+import { imageLoader } from './loaders.js'; 
 const body = document.querySelector('body');
 
 export const loadTheme = () => {
@@ -18,4 +19,5 @@ export const toggleTheme = () => {
   icon.classList.add('animated');
   localStorage.setItem('dark-mode', isDarkMode);
   setTimeout(() => icon.classList.remove('animated'), 500);
+  imageLoader();
 };

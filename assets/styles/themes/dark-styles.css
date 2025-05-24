@@ -198,6 +198,58 @@
 	}
 
 /* Estilos del aboutMe */
-	.dark-mode .aboutMe-title {
-		color: var(--brillant-cian);
-	}
+  .dark-mode .aboutMe-greeting {
+    color: var(--powder-blue);
+  }
+
+  .dark-mode .aboutMe-name {
+    color: var(--electric-blue);
+  }
+
+  .dark-mode .aboutMe-nickname {
+    color: var(--powder-blue);
+  }
+
+  .dark-mode .aboutMe-intro{
+    color: var var(--azure-blue)
+  }
+
+  .dark-mode .btn.projects {
+    background: var(--electric-blue);
+    color: var(--white);
+    border-color: var(--electric-blue);
+  }
+
+  .dark-mode .btn.curriculum {
+    border: 2px solid var(--electric-blue);
+    color: var(--electric-blue);
+  }
+
+  .dark-mode .btn.projects:hover {
+    box-shadow: 0 0 6px var(--powder-blue),
+                0 0 12px var(--ice-blue),
+                inset 0 0 4px var(--white);
+  }
+
+  .dark-mode .btn.curriculum:hover {
+    box-shadow: 0 0 6px var(--electric-blue),
+                0 0 12px var(--azure-blue),
+                inset 0 0 4px var(--steel-blue);
+  }
+
+  .dark-mode .aboutMe-image {
+    box-shadow: 0 0 15px var(--electric-blue),
+                0 0 15px var(--electric-blue);
+  }
+
+  .dark-mode .stat-number {
+    color: var(--electric-blue);
+  }
+
+  .dark-mode .stat-label {
+    color: var(--white);
+  }
+
+  .dark-mode .divider {
+    background: var(--white);
+  }
