@@ -1,8 +1,94 @@
 {
   "es": {
-    "skills-title": "Bienvenidos a habilidades"
+    "title": "Habilidades",
+    "subtitle": "Mi nivel técnico",
+    "categories": [
+      {
+        "label": "Back End",
+        "icon": "fas fa-database",
+        "skills": [
+          { "name": "C# (.NET)", "level": 4 },
+          { "name": "PHP (Laravel)", "level": 3 },
+          { "name": "SQL Server", "level": 4 }
+        ]
+      },
+      {
+        "label": "Front End",
+        "icon": "fas fa-laptop-code",
+        "skills": [
+          { "name": "HTML", "level": 5 },
+          { "name": "CSS", "level": 4 },
+          { "name": "JavaScript", "level": 3 }
+        ]
+      },
+      {
+        "label": "Control de Versiones",
+        "icon": "fas fa-code-branch",
+        "skills": [
+          { "name": "Github", "level": 3 },
+          { "name": "Git", "level": 2 }
+        ]
+      },
+      {
+        "label": "Herramientas Ofimáticas",
+        "icon": "fas fa-file",
+        "skills": [
+          { "name": "Microsoft Excel", "level": 3 }
+        ]
+      }
+    ],
+    "levels": [
+      "Básico",
+      "Intermedio",
+      "Avanzado",
+      "Experto",
+      "Maestro"
+    ]
   },
   "en": {
-    "skills-title": "Welcome to skills"
+    "title": "Skills",
+    "subtitle": "My technical level",
+    "categories": [
+      {
+        "label": "Back End",
+        "icon": "fas fa-database",
+        "skills": [
+          { "name": "C# (.NET)", "level": 4 },
+          { "name": "PHP (Laravel)", "level": 3 },
+          { "name": "SQL Server", "level": 4 }
+        ]
+      },
+      {
+        "label": "Front End",
+        "icon": "fas fa-laptop-code",
+        "skills": [
+          { "name": "HTML", "level": 5 },
+          { "name": "CSS", "level": 4 },
+          { "name": "JavaScript", "level": 3 }
+        ]
+      },
+      {
+        "label": "Version Control",
+        "icon": "fas fa-code-branch",
+        "skills": [
+          { "name": "GitHub", "level": 3 },
+          { "name": "Git", "level": 2 }
+        ]
+      },
+      {
+        "label": "Office Tools",
+        "icon": "fas fa-file",
+        "skills": [
+          { "name": "Microsoft Excel", "level": 3 }
+        ]
+      }
+    ],
+    "levels": [
+      "Basic",
+      "Intermediate",
+      "Advanced",
+      "Expert",
+      "Master"
+    ]
   }
 }

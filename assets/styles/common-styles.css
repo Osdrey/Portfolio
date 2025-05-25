@@ -4,7 +4,7 @@
     padding: 0;
     box-sizing: border-box;
     scroll-behavior: smooth;
-    scroll-margin-top: 70px;
+    scroll-margin-top: 4.35rem;
   }
 
 /* Layout principal */
@@ -27,8 +27,8 @@
   .main-content {
     margin-left: 56px;
     margin-top: 70px;
-    margin-bottom: 105px;
-    padding: 10px 10px 10px 20px;    
+    margin-bottom: 6.5px;
+    padding: 0.6rem 0.6rem 0.6rem 1.2rem;    
     flex: 1;
     position: relative;
     z-index: 1;

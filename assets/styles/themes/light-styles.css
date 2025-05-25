@@ -257,3 +257,45 @@
   .light-mode .divider {
     background: var(--black);
   }
+
+/* Estilos de habilidades */
+  .light-mode .skills-title {
+    color: var(--dark-cobalt-blue);
+  }
+
+  .light-mode .skills-subtitle {
+    color: var(--slate-blue-dark);
+  }
+
+  .light-mode .skill-category {
+    background-color: var(--pale-gray);
+  }
+
+  .light-mode .skill-category:hover {
+    box-shadow: 0 0 20px var(--cornflower-blue);
+  }
+
+  .light-mode .category-toggle {
+    color: var(--dark-cobalt-blue);
+  }
+
+  .light-mode .category-label {
+    color: var(--dark-azure-blue);
+  }
+
+  .light-mode .skill-name {
+    color: var(--dark-sky-blue);
+  }
+
+  .light-mode .level {
+    background-color: var(--dark-gray);
+  }
+
+  .light-mode .level.tooltip:hover::after {
+    background-color: var(--dark-cobalt-blue);
+    color: var(--off-white-gray);
+  }
+
+  .light-mode .level.active {
+    background-color: var(--dark-cobalt-blue);
+  }
