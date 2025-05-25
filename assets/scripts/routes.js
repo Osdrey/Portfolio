@@ -40,17 +40,20 @@ export const routes = {
     projects: {
       html: `pages/projects/projects.html`,
       css:  `pages/projects/projects-styles.css`,
-      json: `pages/projects/projects-translation.json`
+      json: `pages/projects/projects-translation.json`,
+      js:   `pages/projects/projects-scripts.js`
     },
     skills: {
       html: `pages/skills/skills.html`,
       css:  `pages/skills/skills-styles.css`,
-      json: `pages/skills/skills-translation.json`
+      json: `pages/skills/skills-translation.json`,
+      js:   `pages/skills/skills-scripts.js`
     },
     contact: {
       html: `pages/contact/contact.html`,
       css:  `pages/contact/contact-styles.css`,
-      json: `pages/contact/contact-translation.json`
+      json: `pages/contact/contact-translation.json`,
+      json: `pages/contact/contact-scripts.js`
     }
   },
 
