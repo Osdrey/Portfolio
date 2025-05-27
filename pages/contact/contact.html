@@ -1,1 +1,70 @@
-<h1 id="contact-title"></h1>
+<div class="contact-header">
+  <h2 class="contact-title" id="contact-title"></h2>
+  <p class="contact-subtitle" id="contact-subtitle"></p>
+</div>
+
+<div class="contact-container">
+  <div class="contact-left">
+    <div class="contact-info">
+      <div class="info-item">
+        <i class="fas fa-phone"></i>
+        <div>
+          <h3 id="contact-info-1"></h3>
+          <p id="contact-info-2"></p>
+        </div>
+      </div>
+      <div class="info-item">
+        <i class="fas fa-envelope"></i>
+        <div>
+          <h3 id="contact-info-3"></h3>
+          <p id="contact-info-4"></p>
+        </div>
+      </div>
+      <div class="info-item">
+        <i class="fas fa-map-marker-alt"></i>
+        <div>
+          <h3 id="contact-info-5"></h3>
+          <p id="contact-info-6"></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="contact-right">
+    <form class="contact-form" id="contact-form">
+      <div class="form-group">
+        <input type="text" id="name" name="name" placeholder=" " required />
+        <label for="name" id="contact-name"></label>
+      </div>
+
+      <div class="form-group">
+        <input type="email" id="email" name="email" placeholder=" " required />
+        <label for="email" id="contact-email"></label>
+      </div>
+
+      <div class="form-group">
+        <input type="text" id="subject" name="subject" placeholder=" " required />
+        <label for="subject" id="contact-subject"></label>
+      </div>
+
+      <div class="form-group">
+        <textarea id="message" name="message" rows="5" placeholder=" " required></textarea>
+        <label for="message" id="contact-message"></label>
+      </div>
+      <button type="submit" class="submit-button" id="contact-button">
+        <i class="fas fa-paper-plane"></i>
+      </button>
+    </form>
+  </div>
+</div>
+<div id="popup-overlay" class="popup-overlay hidden">
+  <div class="popup-modal">
+    <i id="popup-icon" class="popup-icon"></i>
+    <p id="popup-success-alert" class="popup-success-alert"></p>
+    <p id="popup-success-message" class="popup-success-message"></p>
+    <p id="popup-error-alert" class="popup-error-alert"></p>
+    <p id="popup-error-message" class="popup-error-message"></p>
+    <button id="popup-success-button" class="popup-success-button"></button>
+    <button id="popup-error-button" class="popup-error-button"></button>
+  </div>
+</div>

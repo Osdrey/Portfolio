@@ -53,7 +53,7 @@ export const routes = {
       html: `pages/contact/contact.html`,
       css:  `pages/contact/contact-styles.css`,
       json: `pages/contact/contact-translation.json`,
-      json: `pages/contact/contact-scripts.js`
+      js:   `pages/contact/contact-scripts.js`
     }
   },
 

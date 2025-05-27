@@ -14,20 +14,21 @@
       --denim-blue: #5C81A5;          /* Fondo de inputs o elementos interactivos */
 
     /* Azules claros - para texto e íconos */
-      --electric-blue: #3498db;       /* Títulos o botones */
+      --bright-blue: #00bfff;         /* Titulos e iconos*/
+      --electric-blue: #3498db;       /* Botones */
       --azure-blue: #58A6FF;          /* Texto principal sobre fondo oscuro */
-      --sky-blue: #76B9FF;            /* Enlaces o íconos */
+      --sky-blue: #76B9FF;            /* Enlaces*/
       --ice-blue: #9DCFFF;            /* Texto secundario */
       --powder-blue: #C4E0FF;         /* Detalles sutiles, bordes suaves o etiquetas*/
       --white: #fcfcfc; 				       /* Detalles fuertes y notables*/
 
     /*Botones adicionales */
       --bright-red: #FF6B6B;
-      --vivid-green: #68E873;
+      --vivid-green: #55da60;
       --golden-yellow: #FFE247;
       --deep-purple: #9747FF;
       --hot-pink: #FF69B4;
-      --brillant-cian: #56D7D9;
+      --brillant-cian: #2ad4d7;
   }
 
 /* Cuerpo */
@@ -144,6 +145,7 @@
   /* Color de iconos red social*/
     .dark-mode .social-icon.linkedin { color: var(--electric-blue); }
     .dark-mode .social-icon.github { color: var(--deep-purple); }
+    .dark-mode .social-icon.whatsapp { color: var(--vivid-green); }
     .dark-mode .social-icon.facebook { color: var(--electric-blue); }
     .dark-mode .social-icon.twitter { color: var(--brillant-cian); }
     .dark-mode .social-icon.youtube { color: var(--bright-red); }
@@ -151,6 +153,7 @@
   /* Color hoover iconos red social*/
     .dark-mode .social-icon.linkedin:hover::after { background: var(--electric-blue); }
     .dark-mode .social-icon.github:hover::after { background: var(--deep-purple); }
+    .dark-mode .social-icon.whatsapp:hover::after { background: var(--vivid-green); }
     .dark-mode .social-icon.facebook:hover::after { background: var(--electric-blue); }
     .dark-mode .social-icon.twitter:hover::after { background: var(--brillant-cian); }
     .dark-mode .social-icon.youtube:hover::after { background: var(--bright-red); }
@@ -160,20 +163,12 @@
 
 /* Estilos del home */
   .dark-mode .image-container {
-    border: 0.2rem solid var(--denim-blue);
+    border: 0.2rem solid var(--electric-blue);
     box-shadow: 0 0 1.2rem var(--azure-blue), 0 0 2rem var(--azure-blue) inset;
   }
 
-  .dark-mode .dark-image {
-    display: block;
-  }
-
-  .dark-mode .light-image {
-    display: none;
-  }
-
   .dark-mode .welcome-container {
-    background-color: var(--denim-blue);
+    background-color: var(--electric-blue);
     box-shadow: 0 0 1.2rem var(--azure-blue), 0 0 2rem var(--azure-blue) inset;
   }
 
@@ -183,7 +178,7 @@
   }
 
   .dark-mode .name {
-    background: linear-gradient(to top, var(--azure-blue) 50%, var(--white) 50%);
+    background: linear-gradient(to top, var(--electric-blue) 50%, var(--white) 50%);
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -256,7 +251,7 @@
 
 /* Estilos de habilidades */
   .dark-mode .skills-title {
-    color: var(--electric-blue);
+    color: var(--bright-blue);
   }
 
   .dark-mode .skills-subtitle {
@@ -272,11 +267,11 @@
   }
 
   .dark-mode .category-toggle {
-    color: var(--electric-blue);
+    color: var(--bright-blue);
   }
 
   .dark-mode .category-label {
-    color: var(--azure-blue);
+    color: var(--sky-blue);
   }
 
   .dark-mode .skill-name {
@@ -296,11 +291,119 @@
     background-color: var(--electric-blue);
   }
 
-    @keyframes glow {
+  @keyframes glow {
     from {
-      text-shadow: 0 0 1px var(--sky-blue);
+      text-shadow: 0 0 5px var(--bright-blue), 0 0 10px var(--bright-blue);
     }
     to {
-      text-shadow: 0 0 8px var(--denim-blue);
+      text-shadow: 0 0 15px var(--bright-blue), 0 0 25px var(--bright-blue);
     }
+  }
+
+/* Estilos de contacto */
+  .dark-mode .contact-title {
+    color: var(--bright-blue);
+  }
+
+  .dark-mode .contact-subtitle {
+    color: var(--ice-blue);
+  }
+
+  .dark-mode .contact-container {
+    box-shadow: 0 0 10px var(--black);
+  }
+
+  .dark-mode .info-item i {
+    color: var(--bright-blue);
+  }
+
+  .dark-mode .info-item h3 {
+    color: var(--azure-blue);
+  }
+
+  .dark-mode .info-item p {
+    color: var(--ice-blue);
+  }
+
+  .dark-mode .form-group input,
+  .dark-mode .form-group textarea {
+    border: 2px solid var(--ice-blue);
+    color: var(--ice-blue);
+  }
+
+  .dark-mode .form-group label {
+    color: var(--ice-blue);
+  }
+
+  .dark-mode .form-group input:focus,
+  .dark-mode .form-group textarea:focus {
+    border-color: var(--azure-blue);
+  }
+
+  .dark-mode .form-group input:focus + label,
+  .dark-mode .form-group input:not(:placeholder-shown) + label,
+  .dark-mode form-group textarea:focus + label,
+  .dark-mode .form-group textarea:not(:placeholder-shown) + label {
+    color: var(--azure-blue);
+    background-color: var(--onyx-gray);
+  }
+
+  .dark-mode .submit-button {
+    background: var(--electric-blue);
+    color: var(--white);
+    border-color: var(--electric-blue);
+  }
+
+  .dark-mode .submit-button:hover {
+    box-shadow: 0 0 6px var(--powder-blue),
+                0 0 12px var(--ice-blue),
+                inset 0 0 4px var(--sky-blue);
+  }
+
+  .dark-mode .popup-overlay {
+    background-color: var(--black);
+  }
+
+  .dark-mode .popup-modal{
+    background-color: var(--graphite-gray);
+    box-shadow: 0 0 10px var(--granite-gray);
+  }
+
+  .dark-mode .popup-icon.success,
+  .dark-mode .popup-success-alert {
+    color: var(--vivid-green);
+  }
+
+  .dark-mode .popup-icon.error,
+  .dark-mode .popup-error-alert {
+    color: var(--bright-red);
+  }
+  
+  .dark-mode .popup-success-message, 
+  .dark-mode .popup-error-message {
+    color: var(--white);
+  }
+
+  .dark-mode .popup-success-button {
+    background-color: var(--vivid-green);
+    color: var(--white);
+    border-color: var(--vivid-green);
+  }
+
+  .dark-mode .popup-error-button {
+    background-color: var(--bright-red);
+    color: var(--white);
+    border-color: var(--bright-red);
+  }
+
+  .dark-mode .popup-success-button:hover {
+    box-shadow: 0 0 6px var(--vivid-green),
+                0 0 12px var(--white),
+                inset 0 0 4px var(--vivid-green);
+  }
+
+  .dark-mode .popup-error-button:hover {
+    box-shadow: 0 0 6px var(--bright-red),
+                0 0 12px var(--white),
+                inset 0 0 4px var(--bright-red);
   }

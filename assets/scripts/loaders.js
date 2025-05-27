@@ -85,6 +85,7 @@ export const translationsLoader = async (jsonPath) => {
       elem.setAttribute('data-tooltip', translations[key]);
     }
   });
+  setupWhatsappButton(translations);
 };
 
 // Carga dinámica de partials: header, sidebar, footer con sus estilos
@@ -171,5 +172,20 @@ export const imageLoader = () => {
     }
 
     img.src = src;
+  });
+};
+
+/* Contacto por whatsapp */
+export const setupWhatsappButton = (translations) => {
+  const btnWhatsapp = document.getElementById("btn-whatsapp");
+  if (!btnWhatsapp) return;
+
+  const numero = "573053893480";
+  const mensaje = translations["whatsappMessage"];
+  const url = `https://wa.me/${numero}?text=${encodeURIComponent(mensaje)}`;
+
+  btnWhatsapp.addEventListener("click", function (e) {
+    e.preventDefault();
+    window.open(url, "_blank");
   });
 };

@@ -14,16 +14,17 @@
     --steel-blue-light: #4D8EEB;    /* Fondo de inputs o elementos interactivos */
 
   /* Azules oscuros - para texto e íconos */
-    --dark-cobalt-blue: #2156A5;    /* Títulos o botones */
+    --vivid-blue: #0066CC;          /* Titulos e iconos */
+    --dark-cobalt-blue: #2156A5;    /* Botones */
     --dark-azure-blue: #1B3E7B;     /* Texto principal sobre fondo claro */
-    --dark-sky-blue: #3A60A8;       /* Enlaces o íconos */
+    --dark-sky-blue: #3A60A8;       /* Enlaces */
     --slate-blue-dark: #4E74C3;     /* Texto secundario */
     --powder-blue-light: #A2BCE6;   /* Detalles sutiles, bordes suaves o etiquetas */
     --black: #000000; 							 /* Detalles fuertes y notables*/
 
   /* Botones adicionales*/
     --dark-red: #D32F2F;
-    --dark-green: #4CAF50;
+    --dark-green: #27912b;
     --dark-yellow: #FBC02D;
     --dark-purple: #673AB7;
     --dark-pink: #EC407A;
@@ -144,6 +145,7 @@
   /* Color de iconos red social*/
     .light-mode .social-icon.linkedin { color: var(--dark-cobalt-blue); }
     .light-mode .social-icon.github { color: var(--dark-purple); }
+    .light-mode .social-icon.whatsapp { color: var(--dark-green); }
     .light-mode .social-icon.facebook { color: var(--dark-cobalt-blue); }
     .light-mode .social-icon.twitter { color: var(--dark-cyan); }
     .light-mode .social-icon.youtube { color: var(--dark-red); }
@@ -151,6 +153,7 @@
   /* Color hover iconos red social*/
     .light-mode .social-icon.linkedin:hover::after { background: var(--dark-cobalt-blue); }
     .light-mode .social-icon.github:hover::after { background: var(--dark-purple); }
+    .light-mode .social-icon.whatsapp:hover::after { background: var(--dark-green); }
     .light-mode .social-icon.facebook:hover::after { background: var(--dark-cobalt-blue); }
     .light-mode .social-icon.twitter:hover::after { background: var(--dark-cyan); }
     .light-mode .social-icon.youtube:hover::after { background: var(--dark-red); }
@@ -260,7 +263,7 @@
 
 /* Estilos de habilidades */
   .light-mode .skills-title {
-    color: var(--dark-cobalt-blue);
+    color: var(--vivid-blue);
   }
 
   .light-mode .skills-subtitle {
@@ -276,15 +279,15 @@
   }
 
   .light-mode .category-toggle {
-    color: var(--dark-cobalt-blue);
+    color: var(--vivid-blue);
   }
 
   .light-mode .category-label {
-    color: var(--dark-azure-blue);
+    color: var(--dark-sky-blue);
   }
 
   .light-mode .skill-name {
-    color: var(--dark-sky-blue);
+    color: var(--powder-blue-light);
   }
 
   .light-mode .level {
@@ -293,9 +296,126 @@
 
   .light-mode .level.tooltip:hover::after {
     background-color: var(--dark-cobalt-blue);
-    color: var(--off-white-gray);
+    color: var(--light-gray);
   }
 
   .light-mode .level.active {
     background-color: var(--dark-cobalt-blue);
+  }
+
+  @keyframes glow {
+    from {
+      text-shadow: 0 0 5px var(--steel-blue-light), 0 0 10px var(--steel-blue-light);
+    }
+    to {
+      text-shadow: 0 0 15px var(--steel-blue-light), 0 0 25px var(--steel-blue-light);
+    }
+  }
+
+/* Estilos de contacto */
+  .light-mode .contact-title {
+    color: var(--vivid-blue);
+  }
+
+  .light-mode .contact-subtitle {
+    color: var(--slate-blue-dark);
+  }
+
+  .light-mode .contact-container {
+    box-shadow: 0 0 10px var(--medium-gray);
+  }
+
+  .light-mode .info-item i {
+    color: var(--vivid-blue);
+  }
+
+  .light-mode .info-item h3 {
+    color: var(--dark-cobalt-blue);
+  }
+
+  .light-mode .info-item p {
+    color: var(--slate-blue-dark);
+  }
+
+  .light-mode .form-group input,
+  .light-mode .form-group textarea {
+    border: 2px solid var(--steel-blue-light);
+    color: var(--dark-azure-blue);
+  }
+
+  .light-mode .form-group label {
+    color: var(--slate-blue-dark);
+  }
+
+  .light-mode .form-group input:focus,
+  .light-mode .form-group textarea:focus {
+    border-color: var(--dark-cobalt-blue);
+  }
+
+  .light-mode .form-group input:focus + label,
+  .light-mode .form-group input:not(:placeholder-shown) + label,
+  .light-mode .form-group textarea:focus + label,
+  .light-mode .form-group textarea:not(:placeholder-shown) + label {
+    color: var(--dark-cobalt-blue);
+    background-color: var(--off-white-gray);
+  }
+
+  .light-mode .submit-button {
+    background: var(--dark-cobalt-blue);
+    color: var(--light-gray);
+    border-color: var(--dark-cobalt-blue);
+  }
+
+  .light-mode .submit-button:hover {
+    box-shadow: 0 0 6px var(--powder-blue-light),
+                0 0 12px var(--slate-blue-dark),
+                inset 0 0 4px var(--dark-sky-blue);
+  }
+
+  .light-mode .popup-overlay {
+    background-color: var(--light-gray);
+  }
+
+  .light-mode .popup-modal {
+    background-color: var(--pale-gray);
+    box-shadow: 0 0 10px var(--dark-gray);
+  }
+
+  .light-mode .popup-icon.success,
+  .light-mode .popup-success-alert {
+    color: var(--dark-green);
+  }
+
+  .light-mode .popup-icon.error,
+  .light-mode .popup-error-alert {
+    color: var(--dark-red);
+  }
+
+  .light-mode .popup-success-message, 
+  .light-mode .popup-error-message {
+    color: var(--black);
+  }
+
+  .light-mode .popup-success-button {
+    background-color: var(--dark-green);
+    color: var(--off-white-gray);
+    border-color: var(--dark-green);
+  }
+
+  .light-mode .popup-error-button {
+    background-color: var(--dark-red);
+    color: var(--off-white-gray);
+    border-color: var(--dark-red);
+  }
+
+  .light-mode .popup-success-button:hover {
+    box-shadow: 0 0 6px var(--dark-green),
+                0 0 12px var(--black),
+                inset 0 0 4px var(--dark-green);
+  }
+
+  .light-mode .popup-error-button:hover {
+    box-shadow: 0 0 6px var(--dark-red),
+                0 0 12px var(--black),
+                inset 0 0 4px var(--dark-red);
   }

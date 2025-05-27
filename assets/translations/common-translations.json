@@ -13,7 +13,8 @@
     "contactTooltip": "Contacto",
     "es": "Español",
     "en": "Inglés",
-    "footer-text": "<strong>®<span id=\"year\"></span> Osdrey - No hay errores, solo ideas en fase beta.</strong>"
+    "footer-text": "<strong>®<span id=\"year\"></span> Osdrey - No hay errores, solo ideas en fase beta.</strong>",
+    "whatsappMessage": "Hola Oscar, he estado explorando tu portafolio y me ha parecido muy interesante tu trabajo. Me gustaría saber si estás disponible para conversar."
   },
   "en": {
     "homeLabel": "Home",
@@ -29,6 +30,7 @@
     "contactTooltip": "Contact",
     "es": "Spanish",
     "en": "English",
-    "footer-text": "<strong>®<span id=\"year\"></span> Osdrey - There are no errors, only ideas in beta phase.</strong>"
+    "footer-text": "<strong>®<span id=\"year\"></span> Osdrey - There are no errors, only ideas in beta phase.</strong>",
+    "whatsappMessage": "Hi Oscar, I’ve been reviewing your portfolio and found your work very interesting. I’d like to know if you’re available to talk."
   }
 }
