@@ -87,7 +87,54 @@ function renderSkillLevels(levels) {
   });
 }
 
-function observeSkills() {
+let lastScrollY = window.scrollY;
+let goingUp = false;
+
+window.addEventListener("scroll", () => {
+  const currentScrollY = window.scrollY;
+  goingUp = currentScrollY < lastScrollY;
+  lastScrollY = currentScrollY;
+});
+
+function restartAnimation(el, immediate = false) {
+  const className = el.dataset.animation || el.classList[0];
+  if (!className) return;
+
+  if (immediate && el.classList.contains("skills-title")) {
+    [...el.children].forEach(span => {
+      span.style.animationDelay = "0s";
+    });
+  }
+
+  el.style.animationDelay = immediate ? "0s" : "";
+  el.classList.remove(className);
+  void el.offsetWidth;
+  el.classList.add(className);
+}
+
+function showElement(el) {
+  el.style.opacity = "";
+  el.style.pointerEvents = "";
+  el.style.visibility = "";
+}
+
+function hideElement(el) {
+  el.style.opacity = "0";
+  el.style.pointerEvents = "none";
+  el.style.visibility = "hidden";
+}
+
+function handleEntryAnimation(entry) {
+  const el = entry.target;
+  if (entry.isIntersecting) {
+    showElement(el);
+    restartAnimation(el, goingUp);
+  } else {
+    hideElement(el);
+  }
+}
+
+export function observeSkills() {
   const elements = [
     ".skills-container",
     ".skills-title",
@@ -96,23 +143,32 @@ function observeSkills() {
     ".skill-item",
     ".level"
   ].flatMap(selector => Array.from(document.querySelectorAll(selector)));
+
   const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      const el = entry.target;
-      const className = el.classList[0];
-      if (entry.isIntersecting) {
-        el.style.opacity = "";
-        el.style.pointerEvents = "";
-        el.style.visibility = "";
-        el.classList.remove(className);
-        void el.offsetWidth;
-        el.classList.add(className);
-      } else {
-        el.style.opacity = "0";
-        el.style.pointerEvents = "none";
-        el.style.visibility = "hidden";
+    entries.forEach(handleEntryAnimation);
+  }, {
+    threshold: 0.5,
+    rootMargin: "0px 0px -10% 0px"
+  });
+
+  elements.forEach(el => {
+    if (!el.dataset.animation) {
+      el.dataset.animation = el.classList[0];
+    }
+    observer.observe(el);
+  });
+
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener("click", function (e) {
+      const target = document.querySelector(this.getAttribute("href"));
+      if (target) {
+        e.preventDefault();
+        target.scrollIntoView({ behavior: "smooth", block: "start" });
+        elements.forEach(el => {
+          showElement(el);
+          restartAnimation(el, false);
+        });
       }
     });
-  }, { threshold: 0.5 });
-  elements.forEach(el => observer.observe(el));
+  });
 }

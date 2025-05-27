@@ -1,8 +1,44 @@
 {
   "es": {
-    "contact-title": "Bienvenidos a contacto"
+    "contact-title": "Contáctame",
+    "contact-subtitle": "¿Tienes alguna pregunta?",
+    "contact-info-1": "Lláma​me",
+    "contact-info-2": "305 389 3480",
+    "contact-info-3": "Escríbeme",
+    "contact-info-4": "Llena el formulario",
+    "contact-info-5": "Ubicación",
+    "contact-info-6": "Bello, Antioquía, Colombia",
+    "contact-name": "Nombre",
+    "contact-email": "Correo electrónico",
+    "contact-subject": "Asunto",
+    "contact-message": "Mensaje",
+    "contact-button": "Enviar mensaje",
+    "popup-success-alert": "¡Exito!",
+    "popup-success-message": "Tu mensaje ha sido enviado correctamente. Responderé en el menor tiempo posible.",
+    "popup-error-alert": "Error",
+    "popup-error-message": "Hubo un error al enviar el mensaje. Por favor, intenta de nuevo.",
+    "popup-success-button": "<strong>Continuar</strong>",
+    "popup-error-button": "<strong>Intentar de nuevo</strong>"
   },
   "en": {
-    "contact-title": "Welcome to contact"
+    "contact-title": "Contact Me",
+    "contact-subtitle": "Do you have any questions?",
+    "contact-info-1": "Call me",
+    "contact-info-2": "305 389 3480",
+    "contact-info-3": "Write to me",
+    "contact-info-4": "Fill out the form",
+    "contact-info-5": "Location",
+    "contact-info-6": "Bello, Antioquía, Colombia",
+    "contact-name": "Name",
+    "contact-email": "Email",
+    "contact-subject": "Subject",
+    "contact-message": "Message",
+    "contact-button": "Send Message",
+    "popup-success-alert": "Success!",
+    "popup-success-message": "Your message has been sent successfully. I will reply as soon as possible.",
+    "popup-error-alert": "Error",
+    "popup-error-message": "There was an error sending the message. Please try again.",
+    "popup-success-button": "<strong>Continue</strong>",
+    "popup-error-button": "<strong>Try again</strong>"
   }
 }

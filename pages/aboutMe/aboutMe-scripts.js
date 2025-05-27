@@ -1,18 +1,6 @@
-window.addEventListener("DOMContentLoaded", () => {
-  animatedElements.forEach(el => showElement(el));
-});
-
-const animatedElements = [
-  ".aboutMe-container",
-  ".aboutMe-text",
-  ".aboutMe-greeting",
-  ".aboutMe-name",
-  ".aboutMe-nickname",
-  ".aboutMe-intro",
-  ".aboutMe-buttons",
-  ".aboutMe-profile",
-  ".stat-item"
-].flatMap(selector => Array.from(document.querySelectorAll(selector)));
+export async function init() {
+  observeAboutMe();
+}
 
 let lastScrollY = window.scrollY || 0;
 let goingUp = false;
@@ -25,48 +13,87 @@ window.addEventListener("scroll", () => {
   hasScrolled = true;
 });
 
-function hideElement(element) {
-  if (!element) return;
-  element.style.opacity = "0";
-  element.style.pointerEvents = "none";
-  element.style.visibility = "hidden";
+function hideElement(el) {
+  if (!el) return;
+  el.style.opacity = "0";
+  el.style.pointerEvents = "none";
+  el.style.visibility = "hidden";
 }
 
-function showElement(element) {
-  if (!element) return;
-  element.style.opacity = "";
-  element.style.pointerEvents = "";
-  element.style.visibility = "";
+function showElement(el) {
+  if (!el) return;
+  el.style.opacity = "";
+  el.style.pointerEvents = "";
+  el.style.visibility = "";
 }
 
-function restartAnimationByClass(element, className) {
-  if (!element) return;
+function restartAnimation(el, immediate = false) {
+  const className = el.dataset.animation || el.classList[0];
+  if (!className) return;
 
-  const shouldRemoveDelay = hasScrolled && goingUp;
-
-  if (shouldRemoveDelay) {
-    element.style.animationDelay = "0s";
-  }
-
-  element.classList.remove(className);
-  void element.offsetWidth;
-  element.classList.add(className);
+  el.style.animationDelay = immediate ? "0s" : "";
+  el.classList.remove(className);
+  void el.offsetWidth;
+  el.classList.add(className);
 }
 
 function handleEntryAnimation(entry) {
   const el = entry.target;
-  const className = el.classList[0];
-
   if (entry.isIntersecting) {
     showElement(el);
-    restartAnimationByClass(el, className);
+    restartAnimation(el, hasScrolled && goingUp);
   } else {
     hideElement(el);
   }
 }
 
-const observer = new IntersectionObserver(entries => {
-  entries.forEach(handleEntryAnimation);
-}, { threshold: 0.5 });
+export function observeAboutMe() {
+  const selectors = [
+    ".aboutMe-container",
+    ".aboutMe-text",
+    ".aboutMe-greeting",
+    ".aboutMe-name",
+    ".aboutMe-nickname",
+    ".aboutMe-intro",
+    ".aboutMe-buttons",
+    ".aboutMe-profile",
+    ".stat-item"
+  ];
 
-animatedElements.forEach(el => observer.observe(el));
+  const elements = selectors.flatMap(selector =>
+    Array.from(document.querySelectorAll(selector))
+  );
+
+  if (elements.length === 0) {
+    console.warn("No se encontraron elementos para observar en About.");
+    return;
+  }
+
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(handleEntryAnimation);
+  }, {
+    threshold: 0.5,
+    rootMargin: "0px 0px -10% 0px"
+  });
+
+  elements.forEach(el => {
+    if (!el.dataset.animation) {
+      el.dataset.animation = el.classList[0];
+    }
+    observer.observe(el);
+  });
+
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener("click", function (e) {
+      const target = document.querySelector(this.getAttribute("href"));
+      if (target) {
+        e.preventDefault();
+        target.scrollIntoView({ behavior: "smooth", block: "start" });
+        elements.forEach(el => {
+          showElement(el);
+          restartAnimation(el, false);
+        });
+      }
+    });
+  });
+}
