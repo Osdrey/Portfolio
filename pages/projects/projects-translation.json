@@ -1,8 +1,24 @@
 {
   "es": {
-    "projects-title": "Bienvenidos a proyectos"
+    "projects-title": "Proyectos",
+    "projectsList": [
+      { "name": "MoeAnimals", "type": "Front End", "description": "Este fue mi primer proyecto desarrollado utilizando HTML, CSS y JavaScript. Está inspirado en el curso de Mokepon de Platzi, el cual a su vez toma como referencia los clásicos videojuegos de Pokémon. En este proyecto apliqué conceptos fundamentales de desarrollo web y lógica de programación para construir una experiencia interactiva que simula un juego de batalla entre criaturas." },
+      { "name": "Proyecto 2", "type": "Back End", "description": "Descripción dos" },
+      { "name": "Proyecto 3", "type": "Front End", "description": "Descripción tres" },
+      { "name": "Proyecto 4", "type": "Back End", "description": "Descripción cuatro" },
+      { "name": "Proyecto 5", "type": "Front End", "description": "Descripción cinco" },
+      { "name": "Proyecto 6", "type": "Back End", "description": "Descripción seís" }
+    ]
   },
   "en": {
-    "projects-title": "Welcome to projects"
+    "projects-title": "Projects",
+    "projectsList": [
+      { "name": "MoeAnimals", "type": "Front-End", "description": "This was my first project developed using HTML, CSS, and JavaScript. It was inspired by Platzi's Mokepon course, which itself is based on the classic Pokémon video games. In this project, I applied fundamental concepts of web development and programming logic to build an interactive experience that simulates a creature battle game." },
+      { "name": "Project 2", "type": "Back-End", "description": "Description two" },
+      { "name": "Project 3", "type": "Front-End", "description": "Description three" },
+      { "name": "Project 4", "type": "Back-End", "description": "Description four" },
+      { "name": "Project 5", "type": "Front-End", "description": "Description five" },
+      { "name": "Project 6", "type": "Back-End", "description": "Description six" }
+    ]
   }
 }

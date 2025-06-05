@@ -7,18 +7,18 @@
         "label": "Back End",
         "icon": "fas fa-database",
         "skills": [
-          { "name": "C# (.NET)", "level": 4 },
-          { "name": "PHP (Laravel)", "level": 3 },
-          { "name": "SQL Server", "level": 4 }
+          { "name": "C# (.NET)", "level": 3 },
+          { "name": "PHP (Laravel)", "level": 2 },
+          { "name": "SQL Server", "level": 3 }
         ]
       },
       {
         "label": "Front End",
         "icon": "fas fa-laptop-code",
         "skills": [
-          { "name": "HTML", "level": 5 },
-          { "name": "CSS", "level": 4 },
-          { "name": "JavaScript", "level": 3 }
+          { "name": "HTML", "level": 3 },
+          { "name": "CSS", "level": 3 },
+          { "name": "JavaScript", "level": 4 }
         ]
       },
       {
@@ -33,7 +33,7 @@
         "label": "Herramientas Ofimáticas",
         "icon": "fas fa-file",
         "skills": [
-          { "name": "Microsoft Excel", "level": 3 }
+          { "name": "Microsoft Excel", "level": 4 }
         ]
       }
     ],
@@ -53,18 +53,18 @@
         "label": "Back End",
         "icon": "fas fa-database",
         "skills": [
-          { "name": "C# (.NET)", "level": 4 },
-          { "name": "PHP (Laravel)", "level": 3 },
-          { "name": "SQL Server", "level": 4 }
+          { "name": "C# (.NET)", "level": 3 },
+          { "name": "PHP (Laravel)", "level": 2 },
+          { "name": "SQL Server", "level": 3 }
         ]
       },
       {
         "label": "Front End",
         "icon": "fas fa-laptop-code",
         "skills": [
-          { "name": "HTML", "level": 5 },
-          { "name": "CSS", "level": 4 },
-          { "name": "JavaScript", "level": 3 }
+          { "name": "HTML", "level": 3 },
+          { "name": "CSS", "level": 3 },
+          { "name": "JavaScript", "level": 4 }
         ]
       },
       {
@@ -79,7 +79,7 @@
         "label": "Office Tools",
         "icon": "fas fa-file",
         "skills": [
-          { "name": "Microsoft Excel", "level": 3 }
+          { "name": "Microsoft Excel", "level": 4 }
         ]
       }
     ],

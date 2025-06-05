@@ -34,12 +34,6 @@ https://osdrey.github.io/Portfolio
 
 ## 📬 Contacto
 
-- ✉️ oscardaniloreyesb@gmail.com
+- ✉️ [Correo](oscardaniloreyesb@gmail.com)
 - 💼 [LinkedIn](linkedin.com/in/oscardreyes)
 - 💻 [GitHub](https://github.com/Osdrey)
-
------------------------------------------------------------------------------------------------------------
-
-Este README es solo un punto de partida. Puedes enriquecerlo cuando subas más proyectos o enlaces externos.
-
------------------------------------------------------------------------------------------------------------

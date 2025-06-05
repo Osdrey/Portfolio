@@ -261,6 +261,47 @@
     background: var(--black);
   }
 
+/* Estilos de proyectos */
+  .light-mode .projects-title {
+    color: var(--vivid-blue);
+  }
+
+  .light-mode .card {
+    background: var(--dark-azure-blue);
+    box-shadow: 0 0.5rem 1rem var(--dark-azure-blue);
+  }
+
+  .light-mode .project-name {
+    color: var(--dark-azure-blue);
+  }
+
+  .light-mode .project-name::before,
+  .light-mode .project-name::after {
+    background: var(--dark-azure-blue);
+  }
+
+  .light-mode .project-type,
+  .light-mode .project-description {
+    color: var(--slate-blue-dark);
+  }
+
+  .light-mode .dot {
+    background: var(--medium-gray);
+  }
+
+  .light-mode .dot.active {
+    background: var(--dark-azure-blue);
+  }
+
+  .light-mode .nav-arrow {
+    background: var(--dark-sky-blue);
+    color: var(--sky-blue-light);
+  }
+
+   .light-mode .nav-arrow:hover {
+    background: var(--dark-azure-blue)
+  }
+
 /* Estilos de habilidades */
   .light-mode .skills-title {
     color: var(--vivid-blue);
@@ -287,7 +328,7 @@
   }
 
   .light-mode .skill-name {
-    color: var(--powder-blue-light);
+    color: var(--slate-blue-dark);
   }
 
   .light-mode .level {
@@ -301,15 +342,6 @@
 
   .light-mode .level.active {
     background-color: var(--dark-cobalt-blue);
-  }
-
-  @keyframes glow {
-    from {
-      text-shadow: 0 0 5px var(--steel-blue-light), 0 0 10px var(--steel-blue-light);
-    }
-    to {
-      text-shadow: 0 0 15px var(--steel-blue-light), 0 0 25px var(--steel-blue-light);
-    }
   }
 
 /* Estilos de contacto */
@@ -418,4 +450,14 @@
     box-shadow: 0 0 6px var(--dark-red),
                 0 0 12px var(--black),
                 inset 0 0 4px var(--dark-red);
+  }
+
+/* Animación de titulos */
+  @keyframes glow {
+    from {
+      text-shadow: 0 0 5px var(--steel-blue-light), 0 0 10px var(--steel-blue-light);
+    }
+    to {
+      text-shadow: 0 0 15px var(--steel-blue-light), 0 0 25px var(--steel-blue-light);
+    }
   }
