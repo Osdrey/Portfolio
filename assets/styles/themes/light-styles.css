@@ -62,7 +62,7 @@
     }
 
     .light-mode .toggle-indicator {
-      transform: translateX(1.7em);
+      transform: translateX(clamp(1.2em, 2vw, 1.7em));
       background-color: var(--light-gray);
       box-shadow: var(--dark-sky-blue);
     }
@@ -147,6 +147,18 @@
     .light-mode .social-icon.github { color: var(--dark-purple); }
     .light-mode .social-icon.whatsapp { color: var(--dark-green); }
     .light-mode .social-icon.facebook { color: var(--dark-cobalt-blue); }
+    .light-mode .social-icon.instagram i {
+      background: linear-gradient( 120deg, 
+        var(--dark-cyan),
+        var(--dark-purple),
+        var(--dark-pink),
+        var(--dark-red),
+        var(--dark-yellow)
+      );
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      display: inline-block;
+    }
     .light-mode .social-icon.twitter { color: var(--dark-cyan); }
     .light-mode .social-icon.youtube { color: var(--dark-red); }
 
@@ -155,11 +167,12 @@
     .light-mode .social-icon.github:hover::after { background: var(--dark-purple); }
     .light-mode .social-icon.whatsapp:hover::after { background: var(--dark-green); }
     .light-mode .social-icon.facebook:hover::after { background: var(--dark-cobalt-blue); }
+    .light-mode .social-icon.instagram:hover::after { background: var(--dark-pink);}
     .light-mode .social-icon.twitter:hover::after { background: var(--dark-cyan); }
     .light-mode .social-icon.youtube:hover::after { background: var(--dark-red); }
 
   /* Color letra tooltip*/
-    .light-mode .social-icon::after { color: var(--black); }
+    .light-mode .social-icon::after { color: var(--off-white-gray); }
 
 /* Estilos del home */
   .light-mode .image-container {
@@ -201,7 +214,7 @@
   }
 
   .light-mode .occupation {
-    color: var(--black);
+    color: var(--dark-azure-blue);
   }
 
 /* Estilos del aboutMe */
@@ -295,7 +308,7 @@
 
   .light-mode .nav-arrow {
     background: var(--dark-sky-blue);
-    color: var(--sky-blue-light);
+    color: var(--pale-gray);
   }
 
    .light-mode .nav-arrow:hover {
@@ -376,7 +389,7 @@
   }
 
   .light-mode .form-group label {
-    color: var(--slate-blue-dark);
+    color: var(--dark-cobalt-blue);
   }
 
   .light-mode .form-group input:focus,

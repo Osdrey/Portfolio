@@ -4,12 +4,11 @@
     padding: 0;
     box-sizing: border-box;
     scroll-behavior: smooth;
-    scroll-margin-top: 4.35rem;
+    scroll-margin-top: clamp(3.5rem, 4vw, 4.35rem);
   }
 
 /* Layout principal */
   body {
-    min-height: 100vh;
     display: flex;
     flex-direction: column;
     transition: background-color 0.5s ease;
@@ -25,10 +24,10 @@
 
 /* Contenido principal */
   .main-content {
-    margin-left: 56px;
-    margin-top: 70px;
-    margin-bottom: 6.5rem;
-    padding: 0.6rem 0.6rem 0.6rem 1.2rem;    
+    margin-left: clamp(3rem, 4vw, 3.5rem);
+    margin-top: clamp(3.5rem, 4vw, 4.5rem);
+    margin-bottom: clamp(4.5rem, 6vw, 6.5rem);
+    padding: clamp(0.4rem, 1vw, 0.6rem) clamp(0.4rem, 1vw, 0.6rem) clamp(0.4rem, 1vw, 0.6rem) clamp(0.8rem, 2vw, 1.2rem);
     flex: 1;
     position: relative;
     z-index: 1;
@@ -36,32 +35,9 @@
 
 /* Secciones internas */
   section {
-    min-height: calc(100vh - 150px);
-    padding: 20px;
-    margin-bottom: 10px;
-    border-radius: 8px;
+    min-height: calc(100vh - clamp(8.4rem, 8.8vw, 9.4rem));
+    padding: clamp(0.4rem, 0.6vw, 0.6rem) clamp(2rem, 2.5vw, 2.5rem);
+    margin-bottom: clamp(0.4rem, 0.6vw, 0.6rem);
+    border-radius: clamp(0.3rem, 0.5vw, 0.5rem);
     z-index: 1;
-  }
-
-/* Responsividad */
-  @media (max-width: 768px) {
-    .main-content {
-        margin-left: 0;
-        padding: 10px 15px 10px 15px;
-    }
-
-    section {
-        padding: 15px;
-    }
-  }
-
-  @media (max-width: 480px) {
-    .main-content {
-        padding: 10px;
-    }
-
-    section {
-        padding: 10px;
-        font-size: 0.95rem;
-    }
   }

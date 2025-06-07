@@ -85,7 +85,7 @@ export const translationsLoader = async (jsonPath) => {
       elem.setAttribute('data-tooltip', translations[key]);
     }
   });
-  setupWhatsappButton(translations);
+  socialsLoader(translations);
 };
 
 // Carga dinámica de partials: header, sidebar, footer con sus estilos
@@ -175,17 +175,27 @@ export const imageLoader = () => {
   });
 };
 
-/* Contacto por whatsapp */
-export const setupWhatsappButton = (translations) => {
-  const btnWhatsapp = document.getElementById("btn-whatsapp");
-  if (!btnWhatsapp) return;
+export const socialsLoader = (translations) => {
+  const socialLinks = document.querySelectorAll('.social-icon');
 
-  const numero = "573053893480";
-  const mensaje = translations["whatsappMessage"];
-  const url = `https://wa.me/${numero}?text=${encodeURIComponent(mensaje)}`;
+  socialLinks.forEach(link => {
+    const platform = link.dataset.platform;
+    if (!platform) return;
+    let url = '#';
 
-  btnWhatsapp.addEventListener("click", function (e) {
-    e.preventDefault();
-    window.open(url, "_blank");
+    if (platform === 'Whatsapp') {
+      const whatsapp = routes.socials.Whatsapp;
+      const mensaje = translations['whatsappMessage'] || '';
+      url = `${whatsapp.base}${whatsapp.number}?text=${encodeURIComponent(mensaje)}`;
+    } else {
+      url = routes.socials[platform] || '#';
+    }
+
+    link.addEventListener('click', (e) => {
+      e.preventDefault();
+      if (url !== '#') {
+        window.open(url, '_blank');
+      }
+    });
   });
 };
