@@ -12,38 +12,17 @@
     align-items: flex-start;
   }
 
-/* Contenedor de la imagen */
-  .image-container {
-    width: 70rem;
-    height: 35rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 10px;
-    z-index: 1;
-    animation: fadeInScale 1s ease forwards;
-    animation-delay: 1s;
-    opacity: 0;
-  }
-
-  .image-container img {
-    max-width: 100%;
-    max-height: 100%;
-    border-radius: 1rem;
-  }
-
 /* Mensaje de bienvenida */
   .welcome-container {
-    padding: 0.5rem 1.5rem 0.5rem 0.5rem;
-    border-radius: 15px;
-    font-size: 1.2rem;
-    margin-bottom: -2rem;
+    padding: clamp(0.25rem, 0.4vw, 0.5rem) clamp(0.8rem, 1.2vw, 1.5rem);
+    border-radius: 1.5rem;
+    font-size: clamp(0.85rem, 1vw, 1.2rem);
+    margin-bottom: clamp(-1rem, -2vw, -2rem);
     z-index: 10;
     display: flex;
     align-items: center;
     opacity: 0;
     animation: fadeSlideDown 1s ease forwards;
-    animation-delay: 0.5s;
   }
 
   .welcome-text {
@@ -59,39 +38,57 @@
   }
 
   .wave-emoji {
-    font-size: 1.6rem;
+    font-size: clamp(1rem, 1.3vw, 1.6rem);
     animation: wave-hand 2s infinite ease-in-out;
     transform-origin: 70% 70%;
     padding-right: 0.5rem;
   }
 
+/* Contenedor de la imagen */
+  .image-container {
+    width: clamp(20rem, 50vw, 70rem);
+    height: clamp(15rem, 25vw, 35rem);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    z-index: 1;
+    animation: fadeInScale 1s ease forwards;
+    opacity: 0;
+  }
+
+  .image-container img {
+    max-width: 100%;
+    max-height: 100%;
+    border-radius: 1rem;
+  }
+
 /* Nombre */
   .name {
-    font-size: 9rem;
+    font-size: clamp(2.5rem, 6.5vw, 9rem);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     text-align: left;
-    margin-top: -6.2rem;
-    padding: 1rem;
+    margin-top: clamp(-6.2rem, -4.8vw, -2.2rem);
+    padding: clamp(0.5rem, 2vw, 1rem);
     z-index: 10;
   }
-  
+
   .name-wrapper {
     z-index: 10;
     animation: slideUp 1s ease forwards;
-    animation-delay: 1.5s;
     opacity: 0;
   }
 
 /* Ocupación */
   .occupation {
-    font-size: 1.3rem;
+    font-size: clamp(0.9rem, 1.4vw, 2rem);
+    max-width: 85%;
     text-align: left;
-    margin-top: -1rem;
-    padding-left: 1.5rem;
+    margin-top: clamp(-1.5rem, -1vw, -0.5rem);
+    padding-left: clamp(1rem, 1.2vw, 1.5rem);
     animation: fadeIn 1s ease forwards;
-    animation-delay: 2s;
     opacity: 0;
   }
 
@@ -161,85 +158,8 @@
     }
   }
 
-/* Responsividad */
-  @media (max-width: 1024px) {
-    .name {
-      font-size: 5rem;
-      margin-top: -4rem;
-      padding: 0.5rem;
-    }
-
-    .image-container {
-      width: 90%;
-      height: auto;
-    }
-
-    .occupation {
-      font-size: 1.1rem;
-    }
-
-    .welcome-container {
-      font-size: 1rem;
-    }
-
-    .wave-emoji {
-      font-size: 1.4rem;
-    }
-  }
-
-  @media (max-width: 768px) {
-    .name {
-      font-size: 3.5rem;
-      text-align: center;
-      margin-top: -3rem;
-      padding: 0.5rem;
-    }
-
-    .main-container {
-      align-items: center;
-    }
-
-    .image-container {
-      width: 100%;
-      height: auto;
-      flex-direction: column;
-    }
-
-    .occupation {
-      font-size: 1rem;
-      text-align: center;
-      padding-left: 0;
-    }
-
-    .welcome-container {
-      font-size: 0.9rem;
-      justify-content: center;
-      text-align: center;
-    }
-
-    .wave-emoji {
-      font-size: 1.2rem;
-    }
-  }
-
-  @media (max-width: 480px) {
-    .name {
-      font-size: 2.5rem;
-      margin-top: -2rem;
-    }
-
-    .occupation {
-      font-size: 0.9rem;
-    }
-
-    .welcome-container {
-      font-size: 0.8rem;
-      flex-direction: column;
-      align-items: center;
-    }
-
-    .wave-emoji {
-      font-size: 1rem;
-      padding-right: 0;
-    }
-  }
+/* Retraso de animaciones */
+  .welcome-container { animation-delay: 0.5s; }
+  .image-container { animation-delay: 1s; }
+  .name-wrapper { animation-delay: 1.5s; }
+  .occupation { animation-delay: 2s; }
