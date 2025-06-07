@@ -147,6 +147,18 @@
     .dark-mode .social-icon.github { color: var(--deep-purple); }
     .dark-mode .social-icon.whatsapp { color: var(--vivid-green); }
     .dark-mode .social-icon.facebook { color: var(--electric-blue); }
+    .dark-mode .social-icon.instagram i { 
+      background: linear-gradient( 120deg, 
+        var(--brillant-cian),
+        var(--deep-purple),
+        var(--hot-pink),
+        var(--bright-red),
+        var(--golden-yellow)
+      );
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      display: inline-block;
+    }
     .dark-mode .social-icon.twitter { color: var(--brillant-cian); }
     .dark-mode .social-icon.youtube { color: var(--bright-red); }
 
@@ -155,11 +167,12 @@
     .dark-mode .social-icon.github:hover::after { background: var(--deep-purple); }
     .dark-mode .social-icon.whatsapp:hover::after { background: var(--vivid-green); }
     .dark-mode .social-icon.facebook:hover::after { background: var(--electric-blue); }
+    .dark-mode .social-icon.instagram:hover::after { background: var(--hot-pink);}
     .dark-mode .social-icon.twitter:hover::after { background: var(--brillant-cian); }
     .dark-mode .social-icon.youtube:hover::after { background: var(--bright-red); }
 
   /* Color letra tooltip*/
-    .dark-mode .social-icon::after{ color: var(--white); }
+    .dark-mode .social-icon::after{ color: var(--black); }
 
 /* Estilos del home */
   .dark-mode .image-container {
@@ -189,7 +202,7 @@
   }
 
   .dark-mode .occupation {
-    color: var(--white);
+    color: var(--powder-blue);
   }
 
 /* Estilos del aboutMe */
@@ -249,7 +262,7 @@
     background: var(--white);
   }
 
-/* Estilos de proyectos para modo oscuro */
+/* Estilos de proyectos */
   .dark-mode .projects-title {
     color: var(--bright-blue);
   }
@@ -283,11 +296,11 @@
 
   .dark-mode .nav-arrow {
     background: var(--denim-blue);
-    color: var(--slate-blue);
+    color: var(--graphite-gray);
   }
 
   .dark-mode .nav-arrow:hover {
-    background: var(--cobalt-blue);
+    background: var(--electric-blue);
   }
 
 /* Estilos de habilidades */
@@ -374,7 +387,7 @@
 
   .dark-mode .form-group input:focus + label,
   .dark-mode .form-group input:not(:placeholder-shown) + label,
-  .dark-mode form-group textarea:focus + label,
+  .dark-mode .form-group textarea:focus + label,
   .dark-mode .form-group textarea:not(:placeholder-shown) + label {
     color: var(--azure-blue);
     background-color: var(--onyx-gray);

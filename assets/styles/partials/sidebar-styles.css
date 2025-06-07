@@ -1,90 +1,92 @@
 /* Sidebar base */
   .sidebar {
     position: fixed;
-    top: 70px;
-    left: 10px;
-    bottom: 80px;
-    width: 56px;
-    border-radius: 8px;
-    backdrop-filter: blur(10px);
+    top: clamp(3.5rem, 4vw, 4.4rem);
+    left: clamp(0.4rem, 1vw, 0.6rem);
+    bottom: clamp(4rem, 5vw, 5rem);
+    width: clamp(3rem, 5vw, 3.5rem);
+    border-radius: clamp(0.3rem, 0.5vw, 0.5rem);
+    backdrop-filter: blur(0.6rem);
     transition: width 0.4s ease;
     z-index: 10;
     overflow: visible;
+    font-size: clamp(0.75rem, 1vw + 0.5rem, 1rem);
   }
 
   .sidebar.open {
-    width: 190px;
+    width: clamp(10rem, 15vw, 12rem);
   }
 
   .sidebar .inner {
-    width: 180px;
+    width: 92%;
   }
 
-  /* Botones */
-    .sidebar .burger,
-    .sidebar nav button {
-      display: flex;
-      align-items: center;
-      gap: 20px;
-      height: 44px;
-      padding: 0 12px;
-        margin: 4px 0;
-      font-size: 14px;
-      border: none;
-      border-radius: 8px;
-      background: transparent;
-      cursor: pointer;
-      opacity: 0.7;
-      position: relative;
-      overflow: visible;
-      justify-content: flex-start;
-      transition:
-        background 0.3s ease,
-        opacity 0.3s ease,
-        width 0.4s ease,
-        box-shadow 0.3s ease,
-        color 0.3s ease;
-      white-space: nowrap;
-      width: 44px; /* ancho fijo para cuando sidebar cerrado */
-      box-sizing: border-box;
-    }
+/* Botones */
+  .sidebar .burger,
+  .sidebar nav button {
+    display: flex;
+    align-items: center;
+    gap: clamp(0.8rem, 1.25vw, 1.25rem);
+    height: clamp(2.25rem, 3vw, 2.75rem);
+    padding: 0 clamp(0.5rem, 0.75vw, 0.75rem);
+    margin: clamp(0.2rem, 0.4vw, 0.25rem) 0;
+    font-size: clamp(0.875rem, 0.6vw + 0.5rem, 1rem);
+    border: none;
+    border-radius: clamp(0.3rem, 0.5vw, 0.5rem);
+    background: transparent;
+    cursor: pointer;
+    opacity: 0.7;
+    position: relative;
+    overflow: visible;
+    justify-content: flex-start;
+    transition: background 0.3s ease,
+                opacity 0.3s ease,
+                width 0.4s ease,
+                box-shadow 0.3s ease,
+                color 0.3s ease;
+    white-space: nowrap;
+    width: clamp(2.2rem, 3vw, 2.75rem);
+    box-sizing: border-box;
+  }
 
-    .sidebar.open .burger,
-    .sidebar.open nav button {
-      width: 100%;
-    }
+  .sidebar.open .burger,
+  .sidebar.open nav button {
+    width: 100%;
+  }
 
-    /* Iconos */
-    .sidebar .burger i,
-    .sidebar nav button i {
-      font-size: 18px;
-      flex-shrink: 0;
-      transition: color 0.3s ease;
-      width: 18px;
-      text-align: center;
-    }
+/* Iconos */
+  .sidebar .burger i,
+  .sidebar nav button i {
+    font-size: clamp(1rem, 0.6vw + 0.6rem, 1.25rem);
+    flex-shrink: 0;
+    transition: color 0.3s ease;
+    width: clamp(1rem, 0.6vw + 0.6rem, 1.25rem);
+    height: clamp(1rem, 0.6vw + 0.6rem, 1.25rem);
+    text-align: center;
+  }
 
-    /* Texto */
-    .sidebar .burger p,
-    .sidebar nav button p {
-      margin: 0;
-      overflow: hidden;
-      white-space: nowrap;
-      flex-grow: 1;
-      max-width: 0;
-      opacity: 0;
-      transition: max-width 0.4s ease, opacity 0.3s ease, color 0.3s ease;
-      text-align: left;
-    }
+/* Texto */
+  .sidebar .burger p,
+  .sidebar nav button p {
+    margin: 0;
+    overflow: hidden;
+    white-space: nowrap;
+    flex-grow: 1;
+    max-width: 0;
+    opacity: 0;
+    font-size: clamp(0.75rem, 0.5vw + 0.5rem, 1rem);
+    transition: max-width 0.4s ease, opacity 0.3s ease, color 0.3s ease;
+    text-align: left;
+  }
 
-    .sidebar.open .burger p,
-    .sidebar.open nav button p {
-      max-width: 200px;
-      opacity: 1;
-    }
+  .sidebar.open .burger p,
+  .sidebar.open nav button p {
+    max-width: 100%;
+    opacity: 1;
+  }
 
   .sidebar .burger {
-    padding-left: 20px;
+    padding-left: clamp(1rem, 1.25vw, 1.25rem);
   }
 
   .sidebar .burger:hover {
@@ -101,32 +103,32 @@
     opacity: 1;
   }
 
-  /* Tooltips */
-    .sidebar:not(.open) .burger:hover::after,
-    .sidebar:not(.open) nav button:hover::after {
-      content: attr(data-tooltip);
-      position: absolute;
-      left: 60px;
-      top: 50%;
-      transform: translateY(-50%);
-      padding: 6px 12px;
-      border-radius: 12px;
-      font-size: 13px;
-      pointer-events: none;
-      opacity: 1;
-      transition: opacity 0.3s ease;
-      z-index: 20;
-      box-shadow: none;
-    }
+/* Tooltips */
+  .sidebar:not(.open) .burger:hover::after,
+  .sidebar:not(.open) nav button:hover::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    left: clamp(3rem, 4vw, 3.75rem);
+    top: 50%;
+    transform: translateY(-50%);
+    padding: clamp(0.3rem, 0.5vw, 0.4rem) clamp(0.6rem, 1vw, 0.8rem);
+    border-radius: clamp(0.5rem, 1vw, 0.8rem);
+    font-size: clamp(0.7rem, 0.4vw + 0.4rem, 0.9rem);
+    pointer-events: none;
+    opacity: 1;
+    transition: opacity 0.3s ease;
+    z-index: 20;
+    box-shadow: none;
+  }
 
   .sidebar nav {
     display: grid;
-    padding: 0 6px;
-    gap: 4px;
+    padding: 0 clamp(0.4rem, 0.4vw, 0.4rem);
+    gap: clamp(0.2rem, 0.4vw, 0.25rem);
     position: relative;
   }
 
   .sidebar.open ~ .main-content {
-    margin-left: 190px;
+    margin-left: clamp(10rem, 15vw, 12rem);
     transition: margin-left 0.4s ease;
   }

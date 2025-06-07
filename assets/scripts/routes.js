@@ -68,4 +68,17 @@ export const routes = {
     cv: `assets/files/curriculum-vitae.pdf`,
     hv: `assets/files/hoja-de-vida.pdf`
   },
+
+  socials: {
+    LinkedIn: 'https://www.linkedin.com/in/oscardreyes',
+    GitHub: 'https://github.com/Osdrey',
+    Whatsapp: {
+      base: 'https://wa.me/',
+      number: '573053893480'
+    },
+    Facebook: 'https://facebook.com',
+    Instagram: 'https://www.instagram.com',
+    Twitter: 'https://twitter.com',
+    YouTube: 'https://youtube.com'
+  }
 };
