@@ -86,7 +86,7 @@ export function observeContact() {
 function initializeEmailJS() {
   if (typeof emailjs === 'undefined') {
     const script = document.createElement('script');
-    script.src = 'https://cdn.emailjs.com/dist/email.min.js';
+    script.src = 'https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js';
     script.onload = setupEmailJS;
     document.body.appendChild(script);
   } else {
