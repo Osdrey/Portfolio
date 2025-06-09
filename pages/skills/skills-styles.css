@@ -68,7 +68,7 @@
     }
 
     .category-label {
-      font-size: clamp(1rem, 1.2vw, 1.2rem);
+      font-size: clamp(1rem, 1.1vw, 1.2rem);
       text-align: left;
     }
 
@@ -106,8 +106,8 @@
     }
 
     .level {
-      width: clamp(2rem, 3vw, 3rem);
-      height: clamp(0.3rem, 0.6rem, 0.6rem);
+      width: clamp(1.2rem, 2vw, 3rem);
+      height: clamp(0.2rem, 0.4rem, 0.6rem);
       border-radius: clamp(0.15rem, 0.3vw, 0.3rem);
       opacity: 0;
       transform: translateY(clamp(0.5rem, 1vw, 1rem));

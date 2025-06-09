@@ -20,7 +20,7 @@
     width: clamp(25rem, 50vw, 80rem);
     height: clamp(15rem, 20vw, 25rem);
     position: relative;
-    perspective: clamp(15rem, 60vw, 90rem);
+    perspective: clamp(10rem, 60vw, 90rem);
     margin: -2em;
     opacity: 0;
     animation: fadeIn 1s ease-in-out forwards;
@@ -142,7 +142,7 @@
   }
 
   .project-description {
-    font-size: clamp(0.5rem, 2vw, 1rem);
+    font-size: clamp(0.7rem, 0.85vw, 1rem);
     max-width: clamp(30rem, 90vw, 60rem);
   }
 
@@ -163,8 +163,8 @@
   }
 
   .dot {
-    width: clamp(0.5rem, 2vw, 1rem);
-    height: clamp(0.5rem, 2vw, 1rem);
+    width: clamp(0.5rem, 0.75vw, 1rem);
+    height: clamp(0.5rem, 0.75vw, 1rem);
     border-radius: 50%;
     cursor: pointer;
     transition: all 0.3s ease;
@@ -180,8 +180,8 @@
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    width: clamp(2rem, 5vw, 3rem);
-    height: clamp(2rem, 5vw, 3rem);
+    width: clamp(2rem, 2.5vw, 3rem);
+    height: clamp(2rem, 2.5vw, 3rem);
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -189,7 +189,7 @@
     cursor: pointer;
     z-index: 20;
     transition: all 0.3s ease;
-    font-size: clamp(1rem, 4vw, 1.5rem);
+    font-size: clamp(1rem, 1.5vw, 1.5rem);
     border: none;
     outline: none;
   }
@@ -199,11 +199,11 @@
   }
 
   .nav-arrow.left {
-    left: 1rem;
+    left: clamp(2.8rem, 1.9vw, 1rem);
   }
 
   .nav-arrow.right {
-    right: 1rem;
+    right: clamp(2.8rem, 1.9vw, 1rem);
   }
 
 /* Animaciones */

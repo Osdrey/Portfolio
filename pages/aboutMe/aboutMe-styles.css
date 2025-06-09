@@ -186,3 +186,9 @@
   .aboutMe-buttons { animation-delay: 2.1s; }  
   .aboutMe-profile { animation-delay: 2.4s; }
   .stat-item { animation-delay: 2.7s; }
+
+  @media (max-width: 768px) {
+    .aboutMe-container {
+      flex-direction: column;
+    }
+  }
