@@ -1,0 +1,476 @@
+﻿/* Colores claros */
+  :root {
+  /* Grises para fondos */
+    --light-gray: #F5F7FA;          /* Fondo principal */
+    --off-white-gray: #cfd7df;      /* Header, footer, sidebars */
+    --pale-gray: #b0bdca;           /* Secciones importantes o componentes secundarios */
+    --medium-gray: #8795a1;         /* Contenedores o áreas secundarias */
+    --dark-gray: #687481;           /* Bordes o separadores */
+
+  /* Azules claros - para fondos con contraste o hover */
+    --sky-blue-light: #c4daee;      /* Fondo alternativo para secciones o modales */
+    --baby-blue: #9CCEFF;           /* Hover de botones o tarjetas */
+    --cornflower-blue: #649BFF;     /* Fondo de tarjetas activas o elementos destacados */
+    --steel-blue-light: #4D8EEB;    /* Fondo de inputs o elementos interactivos */
+
+  /* Azules oscuros - para texto e íconos */
+    --vivid-blue: #0066CC;          /* Titulos e iconos */
+    --dark-cobalt-blue: #2156A5;    /* Botones */
+    --dark-azure-blue: #1B3E7B;     /* Texto principal sobre fondo claro */
+    --dark-sky-blue: #3A60A8;       /* Enlaces */
+    --slate-blue-dark: #4E74C3;     /* Texto secundario */
+    --powder-blue-light: #A2BCE6;   /* Detalles sutiles, bordes suaves o etiquetas */
+    --black: #000000; 							 /* Detalles fuertes y notables*/
+
+  /* Botones adicionales*/
+    --dark-red: #D32F2F;
+    --dark-green: #27912b;
+    --dark-yellow: #FBC02D;
+    --dark-purple: #673AB7;
+    --dark-pink: #EC407A;
+    --dark-cyan: #00BCD4;
+  }
+
+/* Cuerpo */
+  body.light-mode {
+    background-color: var(--light-gray);
+    color: var(--dark-cobalt-blue);
+  }
+
+/* Secciones */
+  .light-mode section {
+    background-color: var(--off-white-gray);
+  }
+
+/* Encabezado */
+  .light-mode .header {
+    background-color: var(--off-white-gray);
+    color: var(--dark-cobalt-blue);
+  }
+
+  /* Logo */
+    body.light-mode .logo {
+      color: var(--dark-azure-blue);
+    }
+
+  /* Cambio de tema */
+    .light-mode .theme-toggle {
+      background-color: var(--sky-blue-light);
+      box-shadow: inset 0 8px 60px var(--dark-gray),
+                  inset 8px 0 8px var(--dark-gray),
+                  inset 0 -4px 4px var(--dark-gray);
+    }
+
+    .light-mode .toggle-indicator {
+      transform: translateX(clamp(1.2em, 2vw, 1.7em));
+      background-color: var(--light-gray);
+      box-shadow: var(--dark-sky-blue);
+    }
+
+    .light-mode .toggle-icon {
+      color: var(--dark-yellow);
+    }
+
+  /* Selector de lenguaje */
+    .light-mode #language-selector {
+      background-color: var(--off-white-gray);
+      color: var(--dark-azure-blue);
+    }
+
+/* Barra lateral */
+  .light-mode .sidebar {
+    background-color: var(--off-white-gray);
+    color: var(--black);
+  }
+
+  .light-mode .sidebar .burger,
+  .light-mode .sidebar nav button {
+    color: var(--black);
+  }
+
+  .light-mode .sidebar .burger i,
+  .light-mode .sidebar .burger p,
+  .light-mode .sidebar nav button i,
+  .light-mode .sidebar nav button p {
+    color: var(--black);
+  }
+
+  .light-mode .sidebar .burger:hover i,
+  .light-mode .sidebar .burger:hover p,
+  .light-mode .sidebar nav button:hover i,
+  .light-mode .sidebar nav button:hover p {
+    color: var(--dark-cobalt-blue);
+  }
+
+  .light-mode .sidebar nav button:hover {
+    background: var(--pale-gray);
+    box-shadow: 0 0 6px var(--dark-cobalt-blue),
+                0 0 12px var(--dark-azure-blue),
+                inset 0 0 4px var(--steel-blue-light);
+    color: var(--dark-cobalt-blue);
+  }
+
+  .light-mode .sidebar nav button.active {
+    background-color: var(--dark-cobalt-blue);
+    color: var(--light-gray);
+    box-shadow: 0 0 6px var(--light-gray),
+                0 0 12px var(--dark-azure-blue),
+                inset 0 0 4px var(--steel-blue-light);
+  }
+
+  .light-mode .sidebar nav button.active i,
+  .light-mode .sidebar nav button.active p {
+    color: var(--light-gray);
+  }
+
+  .light-mode .sidebar:not(.open) .burger:hover::after,
+  .light-mode .sidebar:not(.open) nav button:hover::after {
+    background: var(--pale-gray);
+    color: var(--black);
+    border: 1px solid var(--dark-cobalt-blue);
+  }
+
+  .light-mode .sidebar:not(.open) nav button.active::after {
+    background: var(--dark-cobalt-blue);
+    color: var(--light-gray);
+    border: 1px solid var(--dark-cobalt-blue);
+  }
+
+/* Estilos del pie de página */
+  .light-mode footer {
+    background-color: var(--off-white-gray);
+    color: var(--dark-azure-blue);
+  }
+
+  /* Color de iconos red social*/
+    .light-mode .social-icon.linkedin { color: var(--dark-cobalt-blue); }
+    .light-mode .social-icon.github { color: var(--dark-purple); }
+    .light-mode .social-icon.whatsapp { color: var(--dark-green); }
+    .light-mode .social-icon.facebook { color: var(--dark-cobalt-blue); }
+    .light-mode .social-icon.instagram i {
+      background: linear-gradient( 120deg, 
+        var(--dark-cyan),
+        var(--dark-purple),
+        var(--dark-pink),
+        var(--dark-red),
+        var(--dark-yellow)
+      );
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      display: inline-block;
+    }
+    .light-mode .social-icon.twitter { color: var(--dark-cyan); }
+    .light-mode .social-icon.youtube { color: var(--dark-red); }
+
+  /* Color hover iconos red social*/
+    .light-mode .social-icon.linkedin:hover::after { background: var(--dark-cobalt-blue); }
+    .light-mode .social-icon.github:hover::after { background: var(--dark-purple); }
+    .light-mode .social-icon.whatsapp:hover::after { background: var(--dark-green); }
+    .light-mode .social-icon.facebook:hover::after { background: var(--dark-cobalt-blue); }
+    .light-mode .social-icon.instagram:hover::after { background: var(--dark-pink);}
+    .light-mode .social-icon.twitter:hover::after { background: var(--dark-cyan); }
+    .light-mode .social-icon.youtube:hover::after { background: var(--dark-red); }
+
+  /* Color letra tooltip*/
+    .light-mode .social-icon::after { color: var(--off-white-gray); }
+
+/* Estilos del home */
+  .light-mode .image-container {
+    border: 0.2rem solid var(--steel-blue-light);
+    box-shadow: 0 0 1.2rem var(--dark-azure-blue), 0 0 2rem var(--dark-azure-blue) inset;
+  }
+
+  .light-mode .light-image {
+    display: block;
+  }
+
+  .light-mode .dark-image {
+    display: none;
+  }
+
+  .light-mode .welcome-container {
+    background-color: var(--steel-blue-light);
+    box-shadow: 0 0 1.2rem var(--dark-azure-blue), 0 0 2rem var(--dark-azure-blue) inset;
+  }
+
+  .light-mode .welcome-text {
+    color: var(--black);
+    text-shadow: 0 0 1rem var(--baby-blue), 0 0 2rem var(--baby-blue);
+  }
+
+  .light-mode .welcome-text span {
+    animation: flicker 0.5s ease forwards;
+  }
+
+  .light-mode .name {
+    background: linear-gradient(to top, var(--dark-azure-blue) 50%, var(--black) 50%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .light-mode .name-wrapper {
+    filter: drop-shadow(0 0 5px var(--baby-blue));
+  }
+
+  .light-mode .occupation {
+    color: var(--dark-azure-blue);
+  }
+
+/* Estilos del aboutMe */
+  .light-mode .aboutMe-greeting {
+    color: var(--dark-sky-blue);
+  }
+
+  .light-mode .aboutMe-name {
+    color: var(--dark-azure-blue);
+  }
+
+  .light-mode .aboutMe-nickname {
+    color: var(--dark-sky-blue);
+  }
+
+  .light-mode .aboutMe-intro {
+    color: var(--dark-azure-blue);
+  }
+
+  .light-mode .btn.projects {
+    background: var(--dark-cobalt-blue);
+    color: var(--sky-blue-light);
+    border-color: var(--dark-cobalt-blue);
+  }
+
+  .light-mode .btn.curriculum {
+    border: 2px solid var(--dark-cobalt-blue);
+    color: var(--dark-cobalt-blue);
+  }
+
+  .light-mode .btn.projects:hover {
+    box-shadow: 0 0 6px var(--powder-blue-light),
+                0 0 12px var(--slate-blue-dark),
+                inset 0 0 4px var(--black);
+  }
+
+  .light-mode .btn.curriculum:hover {
+    box-shadow: 0 0 6px var(--dark-cobalt-blue),
+                0 0 12px var(--dark-azure-blue),
+                inset 0 0 4px var(--baby-blue);
+  }
+
+  .light-mode .aboutMe-image {
+    box-shadow: 0 0 15px var(--dark-cobalt-blue),
+                0 0 15px var(--dark-cobalt-blue);
+  }
+
+  .light-mode .stat-number {
+    color: var(--dark-cobalt-blue);
+  }
+
+  .light-mode .stat-label {
+    color: var(--black);
+  }
+
+  .light-mode .divider {
+    background: var(--black);
+  }
+
+/* Estilos de proyectos */
+  .light-mode .projects-title {
+    color: var(--vivid-blue);
+  }
+
+  .light-mode .card {
+    background: var(--dark-azure-blue);
+    box-shadow: 0 0.5rem 1rem var(--dark-azure-blue);
+  }
+
+  .light-mode .project-name {
+    color: var(--dark-azure-blue);
+  }
+
+  .light-mode .project-name::before,
+  .light-mode .project-name::after {
+    background: var(--dark-azure-blue);
+  }
+
+  .light-mode .project-type,
+  .light-mode .project-description {
+    color: var(--slate-blue-dark);
+  }
+
+  .light-mode .dot {
+    background: var(--medium-gray);
+  }
+
+  .light-mode .dot.active {
+    background: var(--dark-azure-blue);
+  }
+
+  .light-mode .nav-arrow {
+    background: var(--dark-sky-blue);
+    color: var(--pale-gray);
+  }
+
+   .light-mode .nav-arrow:hover {
+    background: var(--dark-azure-blue)
+  }
+
+/* Estilos de habilidades */
+  .light-mode .skills-title {
+    color: var(--vivid-blue);
+  }
+
+  .light-mode .skills-subtitle {
+    color: var(--slate-blue-dark);
+  }
+
+  .light-mode .skill-category {
+    background-color: var(--pale-gray);
+  }
+
+  .light-mode .skill-category:hover {
+    box-shadow: 0 0 20px var(--cornflower-blue);
+  }
+
+  .light-mode .category-toggle {
+    color: var(--vivid-blue);
+  }
+
+  .light-mode .category-label {
+    color: var(--dark-sky-blue);
+  }
+
+  .light-mode .skill-name {
+    color: var(--slate-blue-dark);
+  }
+
+  .light-mode .level {
+    background-color: var(--dark-gray);
+  }
+
+  .light-mode .level.tooltip:hover::after {
+    background-color: var(--dark-cobalt-blue);
+    color: var(--light-gray);
+  }
+
+  .light-mode .level.active {
+    background-color: var(--dark-cobalt-blue);
+  }
+
+/* Estilos de contacto */
+  .light-mode .contact-title {
+    color: var(--vivid-blue);
+  }
+
+  .light-mode .contact-subtitle {
+    color: var(--slate-blue-dark);
+  }
+
+  .light-mode .contact-container {
+    box-shadow: 0 0 10px var(--medium-gray);
+  }
+
+  .light-mode .info-item i {
+    color: var(--vivid-blue);
+  }
+
+  .light-mode .info-item h3 {
+    color: var(--dark-cobalt-blue);
+  }
+
+  .light-mode .info-item p {
+    color: var(--slate-blue-dark);
+  }
+
+  .light-mode .form-group input,
+  .light-mode .form-group textarea {
+    border: 2px solid var(--steel-blue-light);
+    color: var(--dark-azure-blue);
+  }
+
+  .light-mode .form-group label {
+    color: var(--dark-cobalt-blue);
+  }
+
+  .light-mode .form-group input:focus,
+  .light-mode .form-group textarea:focus {
+    border-color: var(--dark-cobalt-blue);
+  }
+
+  .light-mode .form-group input:focus + label,
+  .light-mode .form-group input:not(:placeholder-shown) + label,
+  .light-mode .form-group textarea:focus + label,
+  .light-mode .form-group textarea:not(:placeholder-shown) + label {
+    color: var(--dark-cobalt-blue);
+    background-color: var(--off-white-gray);
+  }
+
+  .light-mode .submit-button {
+    background: var(--dark-cobalt-blue);
+    color: var(--light-gray);
+    border-color: var(--dark-cobalt-blue);
+  }
+
+  .light-mode .submit-button:hover {
+    box-shadow: 0 0 6px var(--powder-blue-light),
+                0 0 12px var(--slate-blue-dark),
+                inset 0 0 4px var(--dark-sky-blue);
+  }
+
+  .light-mode .popup-overlay {
+    background-color: var(--light-gray);
+  }
+
+  .light-mode .popup-modal {
+    background-color: var(--pale-gray);
+    box-shadow: 0 0 10px var(--dark-gray);
+  }
+
+  .light-mode .popup-icon.success,
+  .light-mode .popup-success-alert {
+    color: var(--dark-green);
+  }
+
+  .light-mode .popup-icon.error,
+  .light-mode .popup-error-alert {
+    color: var(--dark-red);
+  }
+
+  .light-mode .popup-success-message, 
+  .light-mode .popup-error-message {
+    color: var(--black);
+  }
+
+  .light-mode .popup-success-button {
+    background-color: var(--dark-green);
+    color: var(--off-white-gray);
+    border-color: var(--dark-green);
+  }
+
+  .light-mode .popup-error-button {
+    background-color: var(--dark-red);
+    color: var(--off-white-gray);
+    border-color: var(--dark-red);
+  }
+
+  .light-mode .popup-success-button:hover {
+    box-shadow: 0 0 6px var(--dark-green),
+                0 0 12px var(--black),
+                inset 0 0 4px var(--dark-green);
+  }
+
+  .light-mode .popup-error-button:hover {
+    box-shadow: 0 0 6px var(--dark-red),
+                0 0 12px var(--black),
+                inset 0 0 4px var(--dark-red);
+  }
+
+/* Animación de titulos */
+  @keyframes glow {
+    from {
+      text-shadow: 0 0 5px var(--steel-blue-light), 0 0 10px var(--steel-blue-light);
+    }
+    to {
+      text-shadow: 0 0 15px var(--steel-blue-light), 0 0 25px var(--steel-blue-light);
+    }
+  }

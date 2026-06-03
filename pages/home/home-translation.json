@@ -1,0 +1,10 @@
+{
+  "es": {
+    "welcome-text": "¡Bienvenido a mi portafolio!",
+    "occupation": "Estudiante activo en desarrollo de software con enfoque en full stack y ciberseguridad."
+  },
+  "en": {
+    "welcome-text": "¡Welcome to my portfolio!",
+    "occupation": "Active software development student focused on full stack and cybersecurity."
+  }
+}

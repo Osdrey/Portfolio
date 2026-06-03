@@ -1,0 +1,193 @@
+.skills {
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: clamp(0.5rem, 1vw, 1rem);
+}
+
+.skills-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: clamp(30rem, 50vw, 50rem);
+  padding: clamp(1rem, 2vw, 2rem);
+  animation: fadeIn 1s ease-in-out;
+}
+
+.skills-title {
+  font-size: clamp(2rem, 3vw, 3rem);
+  margin-bottom: clamp(0.25rem, 1vw, 0.5rem);
+  animation: glow 2s infinite alternate, fadeZoomIn 1s ease forwards;
+  opacity: 0;
+  text-align: center;
+}
+
+.skills-subtitle {
+  font-size: clamp(1rem, 1.5vw, 1.5rem);
+  margin-bottom: clamp(1rem, 2vw, 2rem);
+  animation: fadeInUp 0.8s ease forwards;
+  opacity: 0;
+  text-align: center;
+}
+
+.skill-category {
+  width: 100%;
+  border-radius: clamp(0.5rem, 1vw, 1rem);
+  margin-bottom: clamp(0.5rem, 0.5vw, 1rem);
+  padding: clamp(0.5rem, 1vw, 1rem) clamp(1rem, 1.5vw, 1.5rem);
+  transition: box-shadow 0.3s;
+  opacity: 0;
+  transform: translateY(clamp(0.1rem, 0.2vw, 0.2rem));
+  animation: fadeSlideUp 0.8s ease forwards;
+}
+
+.category-toggle {
+  background: none;
+  border: none;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  padding: clamp(0.25rem, 1vw, 0.5rem) 0;
+}
+
+  /* Contenedor de habilidades */
+    .category-content {
+      display: flex;
+      align-items: center;
+      gap: clamp(0.5rem, 2vw, 1rem);
+    }
+
+    .category-content i {
+      font-size: clamp(1rem, 1.5vw, 1.5rem);
+      min-width: clamp(1rem, 1.5vw, 1.5rem);
+      text-align: center;
+    }
+
+    .category-label {
+      font-size: clamp(1rem, 1.1vw, 1.2rem);
+      text-align: left;
+    }
+
+    .arrow {
+      font-size: clamp(1rem, 1.5vw, 1.5rem);
+    }
+
+    .skills-list {
+      display: none;
+      flex-direction: column;
+      gap: clamp(0.5rem, 1vw, 1rem);
+      padding: clamp(0.5rem, 1vw, 1rem) 0;
+    }
+
+    .skill-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+    }
+
+    .skill-name {
+      flex: 1;
+      text-align: left;
+      font-size: clamp(0.8rem, 1vw, 1rem);
+      padding-left: clamp(1.5rem, 3vw, 3rem);
+      opacity: 0;
+      transform: translateX(clamp(-0.1rem, -0.2vw, -0.2rem));
+      animation: slideInLeft 0.5s ease-out forwards;
+    }
+
+    .skill-levels {
+      display: flex;
+      gap: clamp(0.1rem, 0.3vw, 0.3rem);
+    }
+
+    .level {
+      width: clamp(1.2rem, 2vw, 3rem);
+      height: clamp(0.2rem, 0.4rem, 0.6rem);
+      border-radius: clamp(0.15rem, 0.3vw, 0.3rem);
+      opacity: 0;
+      transform: translateY(clamp(0.5rem, 1vw, 1rem));
+      animation: levelFadeIn 0.4s ease-out forwards;
+      cursor: pointer;
+    }
+
+    .level.tooltip:hover::after {
+      content: attr(data-tooltip);
+      position: absolute;
+      bottom: 150%;
+      left: 50%;
+      transform: translateX(-50%);
+      padding: clamp(0.2rem, 0.4vw, 0.4rem) clamp(0.4rem, 0.8rem, 0.8rem);
+      border-radius: clamp(0.2rem, 0.4vw, 0.4rem);
+      font-size: clamp(0.7rem, 0.9vw, 0.9rem);
+      white-space: nowrap;
+      opacity: 1;
+      pointer-events: none;
+      transition: opacity 0.2s ease-in-out;
+      z-index: 10;
+    }
+
+/* Animaciones */
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+
+  @keyframes fadeSlideUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes fadeZoomIn {
+    from {
+      opacity: 0;
+      transform: scale(0.9);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+
+  @keyframes levelFadeIn {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes slideInLeft {
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+/* Retraso en animaciones */
+  .skills-title { animation-delay: 0.3s; }
+  .skills-subtitle { animation-delay: 0.6s;}
+  .skill-category:nth-child(3) { animation-delay: 0.9s; }
+  .skill-category:nth-child(4) { animation-delay: 1.2s; }
+  .skill-category:nth-child(5) { animation-delay: 1.5s; }
+  .skill-category:nth-child(6) { animation-delay: 1.8s; }

@@ -1,0 +1,194 @@
+.aboutMe {
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: clamp(0.5rem, 2vw, 2rem);
+}
+
+/* Contenedor principal */
+  .aboutMe-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: clamp(1rem, 3vw, 3rem);
+    max-width: clamp(15rem, 70vw, 70rem);
+    animation: fadeInUp 1s ease forwards;
+    opacity: 0;
+  }
+
+/* Contenedor de texto*/
+  .aboutMe-text {
+    flex: 1;
+    animation: fadeSlideLeft 1s ease forwards;
+    opacity: 0;
+  }
+
+  .aboutMe-greeting {
+    font-size: clamp(0.7rem, 1.2vw, 1.5rem);
+    animation: fadeIn 0.8s ease forwards;
+    opacity: 0;
+  }
+
+  .aboutMe-name {
+    font-size: clamp(1.5rem, 3vw, 5rem);
+    animation: fadeZoomIn 1s ease forwards;
+    opacity: 0;
+  }
+
+  .aboutMe-nickname {
+    font-size: clamp(0.7rem, 1.2vw, 1.5rem);
+    margin: clamp(0.2rem, 0.5vw, 0.5rem) 0;
+    animation: fadeSlideRight 0.8s ease forwards;
+    opacity: 0;
+  }
+
+  .aboutMe-intro {
+    font-size: clamp(0.6rem, 1vw, 1.6rem);
+    margin: clamp(0.4rem, 1vw, 1rem) 0;
+    animation: fadeInUp 0.8s ease forwards;
+    opacity: 0;
+  }
+
+/* Botones */
+  .aboutMe-buttons {
+    display: flex;
+    gap: clamp(0.3rem, 1vw, 1rem);
+    flex-wrap: wrap;
+    animation: fadeZoomIn 1s ease forwards;
+    opacity: 0;
+  }
+
+  .aboutMe-buttons .btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: clamp(0.6rem, 1.2vw, 1.3rem);
+    padding: clamp(0.3rem, 0.8vw, 0.8rem) clamp(0.8rem, 2vw, 1.5rem);
+    margin-right: clamp(0.3rem, 1vw, 1rem);
+    border-radius: 30px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    cursor: pointer;
+  }
+
+  .btn.projects {
+    height: clamp(0.7rem, 1.5vw, 2.5rem);
+  }
+
+  .btn.curriculum {
+    background: transparent;
+    height: clamp(0.7rem, 1.5vw, 2.5rem);
+  }
+
+  .btn.projects:hover,
+  .btn.curriculum:hover {
+    transform: scale(1.05);
+  }
+
+/* Contenedor de imagen*/
+  .aboutMe-profile {
+    display: flex;
+    align-items: center;
+    gap: clamp(0.5rem, 2vw, 2rem);
+    animation: fadeSlideRight 1s ease forwards;
+    opacity: 0;
+  }
+
+  .aboutMe-image {
+    width: clamp(5rem, 12vw, 12rem);
+    height: clamp(10rem, 25vw, 25rem);
+    border-radius: clamp(4rem, 6vw, 6rem);
+    object-fit: cover;
+  }
+
+/* Estadisticas */
+  .stats-column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: clamp(0.5rem, 1vw, 1rem);
+  }
+
+  .stat-item {
+    text-align: center;
+    animation: fadeInUp 1s ease forwards;
+    opacity: 0;
+  }
+
+  .stat-number {
+    font-size: clamp(1rem, 2vw, 2rem);
+    font-weight: bold;
+  }
+
+  .stat-label {
+    font-size: clamp(0.6rem, 1vw, 0.8rem);
+  }
+
+  .divider {
+    width: 75%;
+    height: 1px;
+  }
+
+/* Animaciones */
+  @keyframes fadeSlideLeft {
+    0% {
+      opacity: 0;
+      transform: translateX(30px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes fadeSlideRight {
+    0% {
+      opacity: 0;
+      transform: translateX(-30px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes fadeInUp {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes fadeZoomIn {
+    0% {
+      opacity: 0;
+      transform: scale(0.9);
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+
+/* Retraso de animaciones */
+  .aboutMe-container { animation-delay: 0.3s; }
+  .aboutMe-text { animation-delay: 0.6s; }
+  .aboutMe-greeting { animation-delay: 0.9s; }
+  .aboutMe-name { animation-delay: 1.2s; }
+  .aboutMe-nickname { animation-delay: 1.5s; }
+  .aboutMe-intro { animation-delay: 1.8s; }
+  .aboutMe-buttons { animation-delay: 2.1s; }  
+  .aboutMe-profile { animation-delay: 2.4s; }
+  .stat-item { animation-delay: 2.7s; }
+
+  @media (max-width: 768px) {
+    .aboutMe-container {
+      flex-direction: column;
+    }
+  }

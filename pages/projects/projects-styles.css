@@ -1,0 +1,272 @@
+.projects {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.projects-title {
+  font-size: clamp(2rem, 3vw, 4rem);
+  letter-spacing: -0.02em;
+  margin: clamp(1rem, 1.5vw, 4rem);
+  transform: translateX(-50%);
+  opacity: 0;
+  animation: glow 2s infinite alternate, fadeZoomIn 1s ease forwards;
+}
+
+/* Contenedor de carrusel */
+  .carousel-container {
+    width: clamp(25rem, 50vw, 80rem);
+    height: clamp(15rem, 20vw, 25rem);
+    position: relative;
+    perspective: clamp(10rem, 60vw, 90rem);
+    margin: -2em;
+    opacity: 0;
+    animation: fadeIn 1s ease-in-out forwards;
+  }
+
+  .carousel-track {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  }
+
+/* Tarjetas */
+  .card {
+    position: absolute;
+    width: clamp(12rem, 20vw, 30rem);
+    height: clamp(8rem, 14vw, 20rem);
+    border-radius: clamp(1rem, 1.5vw, 2rem);
+    overflow: hidden;
+    transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    cursor: pointer;
+  }
+
+  .card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  }
+
+  .card.center {
+    z-index: 10;
+    transform: scale(1.1) translateZ(0);
+  }
+
+  .card.center img {
+    filter: none;
+  }
+
+  .card.left-2 img,
+  .card.left-1 img,
+  .card.right-1 img,
+  .card.right-2 img {
+    filter: grayscale(100%);
+  }
+
+  .card.left-2 {
+    z-index: 1;
+    transform: translateX(clamp(-25rem, -20vw, -15rem)) scale(0.8) translateZ(clamp(-30rem, -25vw, -20rem));
+    opacity: 0.7;
+  }
+
+  .card.left-1 {
+    z-index: 5;
+    transform: translateX(clamp(-12rem, -8vw, -5rem)) scale(0.9) translateZ(clamp(-5rem, -8vw, -10rem));
+    opacity: 0.9;
+  }
+
+  .card.right-1 {
+    z-index: 5;
+    transform: translateX(clamp(5rem, 8vw, 12rem)) scale(0.9) translateZ(clamp(-10rem, -8vw, -5rem));
+    opacity: 0.9;
+  }
+
+  .card.right-2 {
+    z-index: 1;
+    transform: translateX(clamp(15rem, 20vw, 20rem)) scale(0.8) translateZ(clamp(-20rem, -25vw, -30rem));
+    opacity: 0.7;
+  }
+
+  .card.hidden {
+    opacity: 0;
+    pointer-events: none;
+  }
+
+/* Detalle de la tarjeta */
+  .project-info {
+    text-align: center;
+    margin-top: clamp(0.5rem, 0.75vw, 1rem);
+    transition: all 0.5s ease-out;
+    opacity: 0;
+    animation: fadeSlideUp 0.6s ease-out forwards;
+  }
+
+  .project-name {
+    font-size: clamp(1.5rem, 2vw, 2.5rem);
+    margin-bottom: 0.5rem;
+    position: relative;
+    display: inline-block;
+    opacity: 0;
+    animation: fadeIn 0.5s ease-out forwards;
+  }
+
+  .project-name::before,
+  .project-name::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    width: clamp(5rem, 7.5vw, 10rem);
+    height: 0.2rem;
+  }
+
+  .project-name::before {
+    left: clamp(-10rem, -7.5vw, -5rem);
+  }
+
+  .project-name::after {
+    right: clamp(-10rem, -7.5vw, -5rem);
+  }
+
+  .project-type {
+    font-size: clamp(1rem, 1.5vw, 1.5rem);
+    padding: 0.5rem 0;
+    margin-top: -15px;
+  }
+
+  .project-description {
+    font-size: clamp(0.7rem, 0.85vw, 1rem);
+    max-width: clamp(30rem, 90vw, 60rem);
+  }
+
+  .project-type,
+  .project-description {
+    letter-spacing: 0.1em;
+    position: relative;
+    opacity: 0;
+    animation: slideInLeft 0.5s ease-out forwards;
+  }
+
+/* Navegación de tarjetas */
+  .dots {
+    display: flex;
+    justify-content: center;
+    gap: clamp(0.5rem, 1vw, 1rem);
+    margin-top: clamp(1rem, 1vw, 2rem);
+  }
+
+  .dot {
+    width: clamp(0.5rem, 0.75vw, 1rem);
+    height: clamp(0.5rem, 0.75vw, 1rem);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    opacity: 0;
+    animation: dotFadeIn 0.5s ease forwards;
+  }
+
+  .dot.active {
+    transform: scale(1.2);
+  }
+
+  .nav-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: clamp(2rem, 2.5vw, 3rem);
+    height: clamp(2rem, 2.5vw, 3rem);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 20;
+    transition: all 0.3s ease;
+    font-size: clamp(1rem, 1.5vw, 1.5rem);
+    border: none;
+    outline: none;
+  }
+
+  .nav-arrow:hover {
+    transform: translateY(-50%) scale(1.1);
+  }
+
+  .nav-arrow.left {
+    left: clamp(2.8rem, 1.9vw, 1rem);
+  }
+
+  .nav-arrow.right {
+    right: clamp(2.8rem, 1.9vw, 1rem);
+  }
+
+/* Animaciones */
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+
+  @keyframes fadeSlideUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes fadeZoomIn {
+    from {
+      opacity: 0;
+      transform: scale(0.9);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+
+  @keyframes slideInLeft {
+    from {
+      opacity: 0;
+      transform: translateX(-0.2rem);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes dotFadeIn {
+    from {
+      opacity: 0;
+      transform: scale(0.5);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+
+/* Retraso de animaciones */
+  .projects-title { animation-delay: 0.3s; }
+  .carousel-container { animation-delay: 0.6s; }
+  .carousel-track { transition-delay: 0.9s; }
+  .project-info { animation-delay: 1.2s; }
+  .project-name { animation-delay: 1.5s; }
+  .project-type { animation-delay: 1.8s; }
+  .project-description { animation-delay: 2.1s; }
+  .dot:nth-child(1) { animation-delay: 2.4s; }
+  .dot:nth-child(2) { animation-delay: 2.6s; }
+  .dot:nth-child(3) { animation-delay: 2.8s; }
+  .dot:nth-child(4) { animation-delay: 3s; }
+  .dot:nth-child(5) { animation-delay: 3.2s; }
+  .dot:nth-child(6) { animation-delay: 3.4s; }

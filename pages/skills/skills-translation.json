@@ -1,0 +1,94 @@
+{
+  "es": {
+    "title": "Habilidades",
+    "subtitle": "Mi nivel técnico",
+    "categories": [
+      {
+        "label": "Back End",
+        "icon": "fas fa-database",
+        "skills": [
+          { "name": "C# (.NET)", "level": 3 },
+          { "name": "PHP (Laravel)", "level": 2 },
+          { "name": "SQL Server", "level": 3 }
+        ]
+      },
+      {
+        "label": "Front End",
+        "icon": "fas fa-laptop-code",
+        "skills": [
+          { "name": "HTML", "level": 3 },
+          { "name": "CSS", "level": 3 },
+          { "name": "JavaScript", "level": 4 }
+        ]
+      },
+      {
+        "label": "Control de Versiones",
+        "icon": "fas fa-code-branch",
+        "skills": [
+          { "name": "Github", "level": 3 },
+          { "name": "Git", "level": 2 }
+        ]
+      },
+      {
+        "label": "Herramientas Ofimáticas",
+        "icon": "fas fa-file",
+        "skills": [
+          { "name": "Microsoft Excel", "level": 4 }
+        ]
+      }
+    ],
+    "levels": [
+      "Básico",
+      "Intermedio",
+      "Avanzado",
+      "Experto",
+      "Maestro"
+    ]
+  },
+  "en": {
+    "title": "Skills",
+    "subtitle": "My technical level",
+    "categories": [
+      {
+        "label": "Back End",
+        "icon": "fas fa-database",
+        "skills": [
+          { "name": "C# (.NET)", "level": 3 },
+          { "name": "PHP (Laravel)", "level": 2 },
+          { "name": "SQL Server", "level": 3 }
+        ]
+      },
+      {
+        "label": "Front End",
+        "icon": "fas fa-laptop-code",
+        "skills": [
+          { "name": "HTML", "level": 3 },
+          { "name": "CSS", "level": 3 },
+          { "name": "JavaScript", "level": 4 }
+        ]
+      },
+      {
+        "label": "Version Control",
+        "icon": "fas fa-code-branch",
+        "skills": [
+          { "name": "GitHub", "level": 3 },
+          { "name": "Git", "level": 2 }
+        ]
+      },
+      {
+        "label": "Office Tools",
+        "icon": "fas fa-file",
+        "skills": [
+          { "name": "Microsoft Excel", "level": 4 }
+        ]
+      }
+    ],
+    "levels": [
+      "Basic",
+      "Intermediate",
+      "Advanced",
+      "Expert",
+      "Master"
+    ]
+  }
+}
